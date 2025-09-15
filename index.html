@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Max Wroblewsky</title>
   <meta name="description" content="Max Wroblewsky — IT Professional, Tech Support Specialist @ Tech Support Calgary. Calgary, AB, Canada." />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=3" />
 </head>
 <body>
-  <!-- Background canvas (particles) -->
+  <!-- Background canvas -->
   <canvas id="bg" aria-hidden="true"></canvas>
 
   <!-- LEFT SIDEBAR -->
@@ -31,42 +31,23 @@
       <p class="muted">Two tracks. Click later to expand details, screenshots, and notes.</p>
     </header>
 
-    <!-- PROFESSIONAL / WORK PROJECTS (placeholder) -->
-    <section class="panel show" id="work">
+    <!-- PROFESSIONAL / WORK PROJECTS -->
+    <section class="panel" id="work">
       <h3>Professional / Work Projects</h3>
-      <p class="muted">Coming soon — I’ll add write-ups, diagrams, and key outcomes here.</p>
-      <!-- Example placeholder card you can duplicate later
-      <article class="accordion">
-        <button class="acc-head">
-          <span>Project Title Here</span>
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5H7z"/></svg>
-        </button>
-        <div class="acc-body">
-          <div class="acc-content">
-            <div class="acc-text">
-              <p>Short description of what you built/fixed/delivered and the impact.</p>
-            </div>
-            <figure class="acc-media">
-              <img src="./your-image.png" alt="Screenshot" />
-              <figcaption>Optional caption.</figcaption>
-            </figure>
-          </div>
-        </div>
-      </article>
-      -->
+      <p class="muted">Coming soon.</p>
     </section>
 
-    <!-- PERSONAL / HOMELAB PROJECTS (placeholder) -->
+    <!-- PERSONAL / HOMELAB PROJECTS -->
     <section class="panel" id="homelab">
       <h3>Personal / Homelab Projects</h3>
-      <p class="muted">Coming soon — Proxmox cluster, Plex RAID10, Cloudflare Tunnel, Mailcow notes, etc.</p>
+      <p class="muted">Coming soon.</p>
     </section>
   </main>
 
-<!-- RIGHT-SIDE VERTICAL PHOTO -->
-<aside class="sidephoto" aria-hidden="true">
-  <img src="./Headshot2.jpg" alt="Presentation photo of Max Wroblewsky">
-</aside>
+  <!-- RIGHT-SIDE VERTICAL PHOTO -->
+  <aside class="sidephoto" aria-hidden="true">
+    <img src="./Headshot2.jpg" alt="Presentation photo of Max Wroblewsky">
+  </aside>
 
   <!-- Lightweight particle background -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
@@ -80,7 +61,7 @@
         line_linked: { enable: true, opacity: 0.30, color: "#788CAA" }
       },
       interactivity: {
-        events: { onhover: { enable: true, mode: "grab" }, onclick: { enable: false } },
+        events: { onhover: { enable: true, mode: "grab" } },
         modes: { grab: { distance: 120, line_linked: { opacity: 0.45 } } }
       },
       retina_detect: true
