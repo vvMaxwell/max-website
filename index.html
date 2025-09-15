@@ -1,46 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Max Wroblewsky</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="description" content="Max Wroblewsky — IT Professional, Tech Support Specialist @ Tech Support Calgary. Calgary, AB, Canada." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Right-side vertical photo panel + readability overlay */
+    .sidephoto {
+      position: fixed;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: clamp(240px, 28vw, 520px);
+      overflow: hidden;
+      z-index: 1; /* above background, below content/sidebar */
+      border-left: 3px solid rgba(255,255,255,0.08);
+      display: block;
+    }
+    .sidephoto img {
+      height: 100%;
+      width: auto;
+      object-fit: cover;
+      filter: brightness(0.95) contrast(1.06) saturate(1.02);
+    }
+    .sidephoto::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg,
+        rgba(15,17,21,0) 0%,
+        rgba(15,17,21,0.15) 40%,
+        rgba(15,17,21,0.22) 60%,
+        rgba(15,17,21,0.45) 100%);
+      pointer-events: none;
+    }
+    /* keep center content from going under the photo on wide screens */
+    @media (min-width: 901px){
+      .main { margin-right: clamp(260px, 30vw, 540px); }
+    }
+    /* hide the side photo on smaller screens */
+    @media (max-width: 900px){
+      .sidephoto { display: none; }
+      .main { margin-right: 0; }
+    }
+    /* small polish so hero doesn’t collide with left sidebar on narrow widths */
+    @media (max-width: 640px){
+      .hero { padding-top: 160px; }
+    }
+  </style>
 </head>
 <body>
-  <div class="sidebar">
-    <img class="avatar" src="./Headshot.jpg" alt="Profile Photo">
+  <!-- Background canvas (particles) -->
+  <canvas id="bg" aria-hidden="true"></canvas>
+
+  <!-- LEFT SIDEBAR -->
+  <aside class="sidebar">
+    <img class="avatar" src="./Headshot.jpg" alt="Photo of Max Wroblewsky" />
     <h1>Max Wroblewsky</h1>
-    <p class="title">IT Student & Homelab Enthusiast</p>
+    <p class="title">IT Professional — Tech Support Specialist @ Tech Support Calgary</p>
     <p class="location">Calgary, AB, CA</p>
-    
+
     <div class="links">
-      <a class="ghost" href="./Resume.pdf" target="_blank"><i class="fa fa-file"></i> Resume (PDF)</a>
-      <a class="ghost" href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a class="ghost" href="./Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+      <a class="ghost" href="https://www.linkedin.com/in/max-wroblewsky-a6492a345/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
-  </div>
+  </aside>
 
-  <div class="main">
-    <h2>Projects</h2>
-    <p>Here you can showcase:</p>
-    <ul>
-      <li><b>Professional/School Projects</b> (Azure, Capstone, Service Desk Proposal, etc.)</li>
-      <li><b>Homelab Projects</b> (Proxmox cluster, Mailcow, Plex, etc.)</li>
-    </ul>
-  </div>
+  <!-- MAIN CONTENT -->
+  <main class="main">
+    <header class="hero">
+      <h2>Projects</h2>
+      <p class="muted">Two tracks. Click later to expand details, screenshots, and notes.</p>
+    </header>
 
-  <!-- Background effect -->
-  <canvas id="bg"></canvas>
+    <!-- PROFESSIONAL / WORK PROJECTS (placeholder) -->
+    <section class="panel show" id="work">
+      <h3>Professional / Work Projects</h3>
+      <p class="muted">Coming soon — I’ll add write-ups, diagrams, and key outcomes here.</p>
+      <!-- Example placeholder card you can duplicate later
+      <article class="accordion">
+        <button class="acc-head">
+          <span>Project Title Here</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5H7z"/></svg>
+        </button>
+        <div class="acc-body">
+          <div class="acc-content">
+            <div class="acc-text">
+              <p>Short description of what you built/fixed/delivered and the impact.</p>
+            </div>
+            <figure class="acc-media">
+              <img src="./your-image.png" alt="Screenshot" />
+              <figcaption>Optional caption.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+      -->
+    </section>
+
+    <!-- PERSONAL / HOMELAB PROJECTS (placeholder) -->
+    <section class="panel" id="homelab">
+      <h3>Personal / Homelab Projects</h3>
+      <p class="muted">Coming soon — Proxmox cluster, Plex RAID10, Cloudflare Tunnel, Mailcow notes, etc.</p>
+    </section>
+  </main>
+
+  <!-- RIGHT-SIDE VERTICAL PHOTO -->
+  <aside class="sidephoto" aria-hidden="true">
+    <img src="./Headshot2.jpg" alt="Presentation photo of Max Wroblewsky">
+  </aside>
+
+  <!-- Lightweight particle background -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script>
     particlesJS("bg", {
       particles: {
-        number: { value: 80 },
+        number: { value: 80, density: { enable: true, value_area: 800 } },
+        color: { value: "#9fb5d8" },
         size: { value: 2 },
         move: { speed: 1 },
-        line_linked: { enable: true, opacity: 0.3 }
-      }
+        line_linked: { enable: true, opacity: 0.30, color: "#788CAA" }
+      },
+      interactivity: {
+        events: { onhover: { enable: true, mode: "grab" }, onclick: { enable: false } },
+        modes: { grab: { distance: 120, line_linked: { opacity: 0.45 } } }
+      },
+      retina_detect: true
     });
   </script>
 </body>
