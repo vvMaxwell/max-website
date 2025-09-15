@@ -4,47 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Max Wroblewsky</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-    .container {
-      text-align: center;
-      background: #fff;
-      padding: 3rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    }
-    h1 {
-      margin-bottom: 1.5rem;
-    }
-    a.button {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      background: #0077b5; /* LinkedIn blue */
-      color: white;
-      text-decoration: none;
-      font-size: 1.1rem;
-      border-radius: 5px;
-      transition: background 0.3s;
-    }
-    a.button:hover {
-      background: #005983;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <div class="container">
+  <div class="sidebar">
+    <img class="avatar" src="./Headshot.jpg" alt="Profile Photo">
     <h1>Max Wroblewsky</h1>
-    <a class="button" href="https://www.linkedin.com/in/max-wroblewsky-a6492a345/" target="_blank">
-      Connect on LinkedIn
-    </a>
+    <p class="title">IT Student & Homelab Enthusiast</p>
+    <p class="location">Calgary, AB, CA</p>
+    
+    <div class="links">
+      <a class="ghost" href="./Resume.pdf" target="_blank"><i class="fa fa-file"></i> Resume (PDF)</a>
+      <a class="ghost" href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </div>
   </div>
+
+  <div class="main">
+    <h2>Projects</h2>
+    <p>Here you can showcase:</p>
+    <ul>
+      <li><b>Professional/School Projects</b> (Azure, Capstone, Service Desk Proposal, etc.)</li>
+      <li><b>Homelab Projects</b> (Proxmox cluster, Mailcow, Plex, etc.)</li>
+    </ul>
+  </div>
+
+  <!-- Background effect -->
+  <canvas id="bg"></canvas>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("bg", {
+      particles: {
+        number: { value: 80 },
+        size: { value: 2 },
+        move: { speed: 1 },
+        line_linked: { enable: true, opacity: 0.3 }
+      }
+    });
+  </script>
 </body>
 </html>
