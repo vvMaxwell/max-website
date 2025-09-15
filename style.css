@@ -1,95 +1,123 @@
-/* Reset */
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: Arial, sans-serif;
-  color: #fff;
-  background: #0e0e0e;
-  overflow: hidden;
+/* ---------- Theme ---------- */
+:root{
+  --bg:#0f1115;
+  --panel:#1b1f2aee;
+  --panel2:#161a23ee;
+  --text:#e8ecf1;
+  --muted:#a9b3c1;
+  --accent:#4ea1ff;
+  --line:#202636;
 }
 
-/* Sidebar */
-.sidebar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 280px;
-  height: 100%;
-  background: rgba(30, 30, 30, 0.95);
-  padding: 40px 20px;
-  box-shadow: 2px 0 10px rgba(0,0,0,0.6);
-  text-align: center;
-  z-index: 2;
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font:16px/1.5 system-ui,Segoe UI,Roboto,Arial,sans-serif;
+  overflow:hidden; /* keeps canvas tidy */
 }
 
-.avatar {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  border: 3px solid #555;
-  margin-bottom: 15px;
+/* ---------- Background canvas ---------- */
+#bg{position:fixed; inset:0; z-index:0}
+
+/* ---------- Left sidebar ---------- */
+.sidebar{
+  position:fixed; left:0; top:0; bottom:0;
+  width:min(320px,92vw);
+  padding:28px;
+  background:linear-gradient(180deg,var(--panel),var(--panel2));
+  backdrop-filter:saturate(120%) blur(2px);
+  border-right:1px solid var(--line);
+  display:flex; flex-direction:column; gap:12px; z-index:3;
+  text-align:center;
 }
 
-h1 {
-  margin: 10px 0;
-  font-size: 22px;
+.avatar{
+  width:110px; aspect-ratio:1/1; border-radius:50%;
+  object-fit:cover; object-position:50% 40%;
+  border:2px solid #2b3448;
+  box-shadow:0 0 0 4px #111825,0 6px 16px rgba(0,0,0,.25);
+  margin:6px auto 8px;
+}
+h1{font-size:1.4rem; margin:.25rem 0 .15rem}
+.title{color:var(--muted); font-size:.95rem}
+.location{color:var(--muted); font-size:.9rem}
+
+.links{display:flex; flex-direction:column; gap:10px; margin-top:10px}
+.links a{
+  display:inline-block; padding:10px 14px; border-radius:10px; text-decoration:none;
+  color:var(--text); background:#1f2738; border:1px solid #283249;
+  transition:transform .12s ease, border-color .12s ease, background .12s ease;
+}
+.links a:hover{transform:translateY(-1px); border-color:#3a4764}
+
+/* ---------- Main content ---------- */
+.main{
+  position:relative; z-index:2;
+  margin-left:min(320px,92vw);
+  padding:28px 28px 60px;
+  /* space for the right photo; updated at 901px+ below */
+  margin-right:0;
 }
 
-.title {
-  font-size: 14px;
-  font-weight: bold;
-  color: #aaa;
+.hero h2{font-size:28px; margin:0 0 8px}
+.muted{color:var(--muted)}
+
+.panel{margin-top:18px}
+.panel h3{margin:14px 0 6px; font-size:20px}
+
+/* ---------- Right-side “cinematic” photo panel ---------- */
+.sidephoto{
+  position:fixed; right:0; top:0; bottom:0;
+  width:clamp(280px, 30vw, 520px);
+  overflow:hidden;
+  z-index:1; /* above bg, below content/sidebar */
+  border-left:1px solid rgba(255,255,255,.08);
+  background:#0f1115; /* fallback while image loads */
+  box-shadow:inset 12px 0 24px rgba(0,0,0,.35); /* soft inner vignette on left edge */
+}
+.sidephoto img{
+  height:100%; width:auto; display:block; object-fit:cover;
+  /* push framing so you are more centered */
+  object-position:62% center; /* tweak 55–70% to taste */
+  filter:saturate(1.02) contrast(1.05) brightness(.98);
 }
 
-.location {
-  font-size: 13px;
-  margin: 10px 0 20px;
-  color: #bbb;
+/* Soft overlays to tidy ceiling/desk edges & boost readability */
+.sidephoto::before,
+.sidephoto::after{
+  content:""; position:absolute; inset:0; pointer-events:none;
+}
+.sidephoto::before{
+  background:linear-gradient(90deg,
+    rgba(15,17,21,.55) 0%,
+    rgba(15,17,21,.35) 24%,
+    rgba(15,17,21,.20) 56%,
+    rgba(15,17,21,0) 100%);
+  mix-blend-mode:multiply;
+}
+.sidephoto::after{
+  background:linear-gradient(180deg,
+    rgba(15,17,21,.35) 0%,
+    rgba(15,17,21,0) 18%,
+    rgba(15,17,21,0) 82%,
+    rgba(15,17,21,.35) 100%);
 }
 
-/* Buttons */
-.links {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+/* Keep main content clear of the photo on wide screens */
+@media (min-width:901px){
+  .main{ margin-right:clamp(300px, 32vw, 560px); }
 }
 
-a.ghost {
-  display: inline-block;
-  padding: 10px 15px;
-  color: #fff;
-  border: 1px solid #888;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  font-size: 14px;
+/* Mobile: hide the right photo */
+@media (max-width:900px){
+  .sidephoto{ display:none; }
+  .main{ margin-right:0; }
 }
 
-a.ghost:hover {
-  background: #0077b5;
-  border-color: #0077b5;
-}
-
-/* Main section */
-.main {
-  margin-left: 300px;
-  padding: 40px;
-  z-index: 1;
-  position: relative;
-}
-
-h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
-/* Background */
-#bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
+/* Very narrow: keep hero clear of sidebar */
+@media (max-width:640px){
+  .main{ padding-top:160px; }
 }
