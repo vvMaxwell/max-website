@@ -58,13 +58,11 @@ h1{font-size:1.4rem; margin:.25rem 0 .15rem}
   position:relative; z-index:2;
   margin-left:min(320px,92vw);
   padding:28px 28px 60px;
-  /* space for the right photo; updated at 901px+ below */
-  margin-right:0;
+  margin-right:0; /* updated at 901px+ below */
 }
 
 .hero h2{font-size:28px; margin:0 0 8px}
 .muted{color:var(--muted)}
-
 .panel{margin-top:18px}
 .panel h3{margin:14px 0 6px; font-size:20px}
 
@@ -80,8 +78,7 @@ h1{font-size:1.4rem; margin:.25rem 0 .15rem}
 }
 .sidephoto img{
   height:100%; width:auto; display:block; object-fit:cover;
-  /* push framing so you are more centered */
-  object-position:62% center; /* tweak 55–70% to taste */
+  object-position:62% center; /* tweak 55–70% to center yourself */
   filter:saturate(1.02) contrast(1.05) brightness(.98);
 }
 
