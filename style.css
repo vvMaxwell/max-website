@@ -23,7 +23,13 @@ body{
 
 
 /* ---------- Background canvas ---------- */
-#bg{position:fixed; inset:0; z-index:0}
+#bg{
+  position:fixed;
+  inset:0;
+  z-index:0;
+  pointer-events:none;   /* important */
+}
+
 
 /* ---------- Left sidebar ---------- */
 .sidebar{
@@ -58,10 +64,11 @@ h1{font-size:1.4rem; margin:.25rem 0 .15rem}
 
 /* ---------- Main content ---------- */
 .main{
-  position:relative; z-index:2;
+  position:relative;
+  z-index:2;
   margin-left:min(320px,92vw);
-  padding:28px 28px 60px;
-  margin-right:0; /* updated at 901px+ below */
+  padding:28px 28px 120px; /* was 60px */
+  margin-right:0;
 }
 
 .hero h2{font-size:28px; margin:0 0 8px}
