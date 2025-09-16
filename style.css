@@ -21,15 +21,13 @@ body{
   min-height:100svh;     /* cover full screen height */
 }
 
-
 /* ---------- Background canvas ---------- */
 #bg{
   position:fixed;
   inset:0;
   z-index:0;
-  pointer-events:none;   /* important */
+  pointer-events:none;   /* important so it can't block scroll/clicks */
 }
-
 
 /* ---------- Left sidebar ---------- */
 .sidebar{
@@ -67,7 +65,7 @@ h1{font-size:1.4rem; margin:.25rem 0 .15rem}
   position:relative;
   z-index:2;
   margin-left:min(320px,92vw);
-  padding:28px 28px 120px; /* was 60px */
+  padding:28px 28px 120px; /* extra bottom space for open dropdowns */
   margin-right:0;
 }
 
@@ -114,16 +112,24 @@ h1{font-size:1.4rem; margin:.25rem 0 .15rem}
 
 .project > details > summary{
   list-style:none; cursor:pointer; display:grid;
-  grid-template-columns: 16px 1fr auto; align-items:center;
+  grid-template-columns: 16px 1fr auto; /* arrow | title | meta */
+  align-items:center;
   gap:10px; padding:12px 12px; font-weight:600; color:#e3eaf6;
 }
 .project > details > summary::-webkit-details-marker{display:none}
 .project > details[open] > summary{ background:#0e141c; }
 
-.project .dot{
-  width:10px; height:10px; border-radius:50%;
-  background:var(--accent); box-shadow:0 0 0 3px rgba(78,161,255,.18);
+/* Arrow indicator in each project summary */
+.project > details > summary .arrow{
+  display:inline-block;
+  width:0; height:0; margin-right:2px;
+  border-left:6px solid #8fa7c7;       /* arrow color */
+  border-top:4px solid transparent;
+  border-bottom:4px solid transparent;
+  transition:transform .2s ease;
 }
+.project > details[open] > summary .arrow{ transform:rotate(90deg); }
+
 .project .title{white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
 .project .meta{color:var(--muted); font-weight:500; font-size:.9rem}
 
