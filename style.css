@@ -16,8 +16,11 @@ body{
   background:var(--bg);
   color:var(--text);
   font:16px/1.5 system-ui,Segoe UI,Roboto,Arial,sans-serif;
-  overflow:hidden; /* keeps canvas tidy */
+  overflow-x:hidden;     /* prevent sideways jiggle */
+  overflow-y:auto;       /* allow vertical scrolling */
+  min-height:100svh;     /* cover full screen height */
 }
+
 
 /* ---------- Background canvas ---------- */
 #bg{position:fixed; inset:0; z-index:0}
