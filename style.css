@@ -7,6 +7,10 @@
   --muted:#a9b3c1;
   --accent:#4ea1ff;
   --line:#202636;
+
+  /* right photo rail */
+  --sidephoto-w: clamp(240px, 23vw, 400px);
+  --sidephoto-fade: 84%;
 }
 
 *{box-sizing:border-box}
@@ -16,20 +20,15 @@ body{
   background:var(--bg);
   color:var(--text);
   font:16px/1.5 system-ui,Segoe UI,Roboto,Arial,sans-serif;
-  overflow-x:hidden;     /* prevent sideways jiggle */
-  overflow-y:auto;       /* allow vertical scrolling */
-  min-height:100svh;     /* cover full screen height */
+  overflow-x:hidden;
+  overflow-y:auto;
+  min-height:100svh;
 }
 
 /* ---------- Background canvas ---------- */
-#bg{
-  position:fixed;
-  inset:0;
-  z-index:0;
-  pointer-events:none;   /* important so it can't block scroll/clicks */
-}
+#bg{position:fixed; inset:0; z-index:0; pointer-events:none}
 
-/* ---------- Left sidebar ---------- */
+/* ---------- Sidebar (desktop left, mobile top) ---------- */
 .sidebar{
   position:fixed; left:0; top:0; bottom:0;
   width:min(320px,92vw);
@@ -62,11 +61,10 @@ h1{font-size:1.4rem; margin:.25rem 0 .15rem}
 
 /* ---------- Main content ---------- */
 .main{
-  position:relative;
-  z-index:2;
+  position:relative; z-index:2;
   margin-left:min(320px,92vw);
   padding:28px 28px 120px; /* extra bottom space for open dropdowns */
-  margin-right:0;
+  margin-right:0; /* set on wide screens below */
 }
 
 .hero h2{font-size:28px; margin:0 0 8px}
@@ -84,11 +82,8 @@ h1{font-size:1.4rem; margin:.25rem 0 .15rem}
   margin-bottom:16px;
 }
 .accordion > summary{
-  list-style:none;
-  cursor:pointer;
-  padding:14px 16px;
-  font-weight:700;
-  color:#d7e1f2;
+  list-style:none; cursor:pointer;
+  padding:14px 16px; font-weight:700; color:#d7e1f2;
   display:flex; align-items:center; gap:10px;
 }
 .accordion > summary::before{
@@ -112,18 +107,18 @@ h1{font-size:1.4rem; margin:.25rem 0 .15rem}
 
 .project > details > summary{
   list-style:none; cursor:pointer; display:grid;
-  grid-template-columns: 16px 1fr auto; /* arrow | title | meta */
+  grid-template-columns: 16px 1fr auto; /* arrow | title | meta (skills) */
   align-items:center;
   gap:10px; padding:12px 12px; font-weight:600; color:#e3eaf6;
 }
 .project > details > summary::-webkit-details-marker{display:none}
 .project > details[open] > summary{ background:#0e141c; }
 
-/* Arrow indicator in each project summary */
+/* Arrow indicator */
 .project > details > summary .arrow{
   display:inline-block;
   width:0; height:0; margin-right:2px;
-  border-left:6px solid #8fa7c7;       /* arrow color */
+  border-left:6px solid #8fa7c7;
   border-top:4px solid transparent;
   border-bottom:4px solid transparent;
   transition:transform .2s ease;
@@ -149,74 +144,71 @@ h1{font-size:1.4rem; margin:.25rem 0 .15rem}
   filter:saturate(1.02) contrast(1.05);
 }
 
-/* Stack on small screens inside the panel body */
+/* ---------- Phone / small screens ---------- */
+@media (max-width:900px){
+  /* Sidebar becomes a top header */
+  .sidebar{
+    position:static; width:100%;
+    border-right:none; border-bottom:1px solid var(--line);
+    padding:18px 16px;
+    align-items:center;
+  }
+  .links{flex-direction:row; width:100%; max-width:520px}
+  .links a{flex:1; text-align:center}
+
+  /* Content spans full width */
+  .main{ margin-left:0; margin-right:0; padding:18px 16px 100px; }
+
+  /* Hide the decorative right photo on phones */
+  .sidephoto{ display:none; }
+}
+
+/* Stack the text+image inside each project on narrow widths */
 @media (max-width:720px){
   .project-body{ grid-template-columns: 1fr; }
 }
 
 /* ---------- Right-side “cinematic” photo panel ---------- */
-:root { --sidephoto-w: clamp(280px, 30vw, 560px); }
-
 .sidephoto{
   position:fixed; right:0; top:0; bottom:0;
   width:var(--sidephoto-w);
   overflow:hidden;
-  z-index:1; /* above bg, below content/sidebar */
+  z-index:1;
   border-left:1px solid rgba(255,255,255,.08);
-  background:#0f1115; /* fallback while image loads */
-  box-shadow:inset 12px 0 24px rgba(0,0,0,.35); /* soft inner vignette on left edge */
+  background:#0f1115;
+  box-shadow:inset 12px 0 24px rgba(0,0,0,.35);
   isolation:isolate;
 }
-.sidephoto img{
+.sidephoto > img{
+  position:absolute; inset:0;
   height:100%; width:auto; display:block; object-fit:cover;
-  object-position:85% center; /* push focal point right so you're not cropped */
+  object-position: 98% center; /* crops more of the left so you stay visible */
   filter:saturate(1.02) contrast(1.05) brightness(.98);
 }
-
-/* Soft overlays + feathered inner edge */
 .sidephoto::before,
-.sidephoto::after{
-  content:""; position:absolute; inset:0; pointer-events:none;
-}
-
-/* subtle darkening from the right to blend with theme */
+.sidephoto::after{ content:""; position:absolute; inset:0; pointer-events:none; }
 .sidephoto::after{
   background:linear-gradient(180deg,
-    rgba(15,17,21,.35) 0%,
+    rgba(15,17,21,.38) 0%,
     rgba(15,17,21,0) 18%,
     rgba(15,17,21,0) 82%,
-    rgba(15,17,21,.35) 100%);
+    rgba(15,17,21,.38) 100%);
 }
-
-/* primary left-edge blend */
 .sidephoto::before{
   background:linear-gradient(90deg,
-    rgba(15,17,21,.55) 0%,
-    rgba(15,17,21,.35) 24%,
-    rgba(15,17,21,.20) 56%,
+    rgba(15,17,21,.65) 0%,
+    rgba(15,17,21,.42) 26%,
+    rgba(15,17,21,.20) 54%,
     rgba(15,17,21,0) 100%);
   mix-blend-mode:multiply;
 }
-
-/* extra-smooth feather when masks are supported */
 @supports (mask-image: linear-gradient(#000,#000)){
   .sidephoto{
-    mask-image: linear-gradient(to left, #000 78%, rgba(0,0,0,0));
+    mask-image: linear-gradient(to left, #000 var(--sidephoto-fade), rgba(0,0,0,0));
   }
 }
 
-/* Keep main content clear of the photo on wide screens */
+/* ---------- Keep main content clear of the photo on wide screens ---------- */
 @media (min-width:901px){
   .main{ margin-right: calc(var(--sidephoto-w) + 24px); }
-}
-
-/* Mobile: hide the right photo */
-@media (max-width:900px){
-  .sidephoto{ display:none; }
-  .main{ margin-right:0; }
-}
-
-/* Very narrow: keep hero clear of sidebar */
-@media (max-width:640px){
-  .main{ padding-top:160px; }
 }

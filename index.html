@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Max Wroblewsky</title>
   <meta name="description" content="Max Wroblewsky — IT Professional, Tech Support Specialist @ Tech Support Calgary. Calgary, AB, Canada." />
-  <link rel="stylesheet" href="style.css?v=6" />
+  <!-- bump query to bust cache after deploy -->
+  <link rel="stylesheet" href="style.css?v=7" />
 </head>
 <body>
   <!-- Background canvas -->
   <canvas id="bg" aria-hidden="true"></canvas>
 
-  <!-- LEFT SIDEBAR -->
+  <!-- LEFT SIDEBAR / becomes top header on mobile -->
   <aside class="sidebar">
     <img class="avatar" src="./Headshot.jpg" alt="Photo of Max Wroblewsky" />
     <h1>Max Wroblewsky</h1>
@@ -36,7 +37,173 @@
       <details class="accordion" open>
         <summary>Professional / Work Projects</summary>
         <div class="acc-body">
-          <p class="muted">Coming soon.</p>
+          <ul class="project-list">
+
+            <!-- Endpoint Management -->
+            <li class="project">
+              <details>
+                <summary>
+                  <span class="arrow"></span>
+                  <span class="title">Endpoint Management</span>
+                  <span class="meta">Skills: Device Management • Microsoft Defender</span>
+                </summary>
+                <div class="project-body">
+                  <div class="project-text">
+                    <p>
+                      Custom configured Intune policies and Microsoft Defender updates,
+                      strengthening endpoint security and compliance across user devices.
+                    </p>
+                  </div>
+                  <figure class="project-thumb">
+                    <img src="./images/Intune.png" alt="Microsoft Intune / Defender configuration" loading="lazy">
+                    <figcaption class="muted small">Intune &amp; Defender</figcaption>
+                  </figure>
+                </div>
+              </details>
+            </li>
+
+            <!-- Client Office Infrastructure Rebuild -->
+            <li class="project">
+              <details>
+                <summary>
+                  <span class="arrow"></span>
+                  <span class="title">Client Office Infrastructure Rebuild</span>
+                  <span class="meta">Skills: IT Infrastructure • Networking</span>
+                </summary>
+                <div class="project-body">
+                  <div class="project-text">
+                    <p>
+                      Built a client’s IT environment after an office move. Configured firewall, router, switches,
+                      and VOIP system; deployed two domain controllers; set up TVs with mini-PCs, and prepared
+                      end-user workstations with docks and cable management.
+                    </p>
+                  </div>
+                  <figure class="project-thumb">
+                    <img src="./images/client-infrastructure.png" alt="Office networking and systems rebuild" loading="lazy">
+                    <figcaption class="muted small">Infrastructure Rebuild</figcaption>
+                  </figure>
+                </div>
+              </details>
+            </li>
+
+            <!-- ServiceNow Service Desk -->
+            <li class="project">
+              <details>
+                <summary>
+                  <span class="arrow"></span>
+                  <span class="title">ServiceNow Service Desk</span>
+                  <span class="meta">Skills: ITIL • ServiceNow</span>
+                </summary>
+                <div class="project-body">
+                  <div class="project-text">
+                    <p>
+                      Worked in a simulated IT service desk environment using ServiceNow. Logged, categorized, and
+                      resolved incident tickets while following ITIL best practices for escalation and problem management.
+                    </p>
+                  </div>
+                  <figure class="project-thumb">
+                    <img src="./images/servicenow.jpg" alt="ServiceNow service desk incident queue" loading="lazy">
+                    <figcaption class="muted small">Service Desk Practice</figcaption>
+                  </figure>
+                </div>
+              </details>
+            </li>
+
+            <!-- Multi-Site Enterprise Network Design -->
+            <li class="project">
+              <details>
+                <summary>
+                  <span class="arrow"></span>
+                  <span class="title">Multi-Site Enterprise Network Design</span>
+                  <span class="meta">Skills: Network Design • Cisco</span>
+                </summary>
+                <div class="project-body">
+                  <div class="project-text">
+                    <p>
+                      Built a logical multi-site enterprise network in Packet Tracer with VLANs, subnetting/summarization,
+                      redundant gateways, and mixed OSPF/EIGRP routing to meet scalability and security requirements.
+                    </p>
+                  </div>
+                  <figure class="project-thumb">
+                    <img src="./images/ciscopt.jpg" alt="Packet Tracer enterprise network diagram" loading="lazy">
+                    <figcaption class="muted small">Enterprise Topology</figcaption>
+                  </figure>
+                </div>
+              </details>
+            </li>
+
+            <!-- WIT Cloud Transformation -->
+            <li class="project">
+              <details>
+                <summary>
+                  <span class="arrow"></span>
+                  <span class="title">WIT Cloud Transformation</span>
+                  <span class="meta">Skills: Cloud Architecture • Azure</span>
+                </summary>
+                <div class="project-body">
+                  <div class="project-text">
+                    <p>
+                      Collaborated on a hybrid cloud design using Azure. Built Entra ID and RBAC layouts, resource groups,
+                      and secure cloud connectivity, with disaster recovery and monitoring. Delivered diagrams, a demo,
+                      and cost analysis to support cloud adoption.
+                    </p>
+                  </div>
+                  <figure class="project-thumb">
+                    <img src="./images/msazure.png" alt="Azure architecture diagram" loading="lazy">
+                    <figcaption class="muted small">Azure Hybrid Design</figcaption>
+                  </figure>
+                </div>
+              </details>
+            </li>
+
+            <!-- Capstone Project -->
+            <li class="project">
+              <details>
+                <summary>
+                  <span class="arrow"></span>
+                  <span class="title">Capstone Project</span>
+                  <span class="meta">Skills: Volunteer App • PowerApps</span>
+                </summary>
+                <div class="project-body">
+                  <div class="project-text">
+                    <p>
+                      Built a volunteer matching platform in Microsoft Azure and Power Apps with features like job postings,
+                      profiles, reviews, and a swipe-style matching algorithm to connect volunteers and organizations.
+                    </p>
+                  </div>
+                  <figure class="project-thumb">
+                    <img src="./images/mspowerapp.png" alt="Power Apps volunteer matching UI" loading="lazy">
+                    <figcaption class="muted small">Power Apps Prototype</figcaption>
+                  </figure>
+                </div>
+              </details>
+            </li>
+
+            <!-- Advanced Network Security Design -->
+            <li class="project">
+              <details>
+                <summary>
+                  <span class="arrow"></span>
+                  <span class="title">Advanced Network Security Design</span>
+                  <span class="meta">Skills: Firewall Security • Threat Intelligence</span>
+                </summary>
+                <div class="project-body">
+                  <div class="project-text">
+                    <p>
+                      Built a secure environment with Palo Alto firewalls, including geo-blocking, file/domain blocking,
+                      syslog forwarding, and threat feed integration. Implemented reconnaissance protection and researched
+                      disaster recovery options to strengthen overall resilience.
+                    </p>
+                  </div>
+                  <figure class="project-thumb">
+                    <img src="./images/paloalto.png" alt="Palo Alto firewall security rules" loading="lazy">
+                    <figcaption class="muted small">Palo Alto Security</figcaption>
+                  </figure>
+                </div>
+              </details>
+            </li>
+
+          </ul>
         </div>
       </details>
     </section>
@@ -53,7 +220,7 @@
           <!-- Project list -->
           <ul class="project-list">
 
-            <!-- Project -->
+            <!-- Proxmox Cluster -->
             <li class="project">
               <details>
                 <summary>
@@ -68,7 +235,8 @@
                       I run game servers, utility containers, and media/AI workloads on it.
                     </p>
                     <p class="muted small">
-                      Example VMs: <strong>plex-serv</strong>, <strong>mail-serv</strong>, <strong>ai-serv</strong>, <strong>adblock-serv</strong>, <strong>retropie-serv</strong>.
+                      Example VMs: <strong>plex-serv</strong>, <strong>mail-serv</strong>, <strong>ai-serv</strong>,
+                      <strong>adblock-serv</strong>, <strong>retropie-serv</strong>.
                     </p>
                   </div>
                   <figure class="project-thumb">
@@ -79,7 +247,7 @@
               </details>
             </li>
 
-            <!-- Project -->
+            <!-- Plex -->
             <li class="project">
               <details>
                 <summary>
@@ -90,8 +258,8 @@
                 <div class="project-body">
                   <div class="project-text">
                     <p>
-                      Dedicated VM for media and tuned networking for smooth
-                      local/remote playback. Automated library updates and periodic backups.
+                      Dedicated VM for media and tuned networking for smooth local/remote playback.
+                      Automated library updates and periodic backups.
                     </p>
                   </div>
                   <figure class="project-thumb">
@@ -102,7 +270,7 @@
               </details>
             </li>
 
-            <!-- Project -->
+            <!-- Mailcow -->
             <li class="project">
               <details>
                 <summary>
@@ -125,7 +293,7 @@
               </details>
             </li>
 
-            <!-- Project -->
+            <!-- AI / LLM -->
             <li class="project">
               <details>
                 <summary>
@@ -147,12 +315,12 @@
               </details>
             </li>
 
-            <!-- Project -->
+            <!-- Cisco Lab -->
             <li class="project">
               <details>
                 <summary>
                   <span class="arrow"></span>
-                  <span class="title">Cisco Lab (Router & Switch)</span>
+                  <span class="title">Cisco Lab (Router &amp; Switch)</span>
                   <span class="meta">VLANs • trunking • ACLs</span>
                 </summary>
                 <div class="project-body">
