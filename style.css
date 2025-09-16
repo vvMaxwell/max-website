@@ -179,11 +179,12 @@ h1{font-size:1.4rem; margin:.25rem 0 .15rem}
   box-shadow:inset 12px 0 24px rgba(0,0,0,.35);
   isolation:isolate;
 }
+/* Right-side “cinematic” photo panel */
 .sidephoto > img{
   position:absolute; inset:0;
   height:100%; width:auto; display:block; object-fit:cover;
-  object-position: 70% center; /* crops more of the left so you stay visible */
-  filter:saturate(1.02) contrast(1.05) brightness(.98);
+  object-position: 78% center;  /* was 70% */
+  filter:saturate(1.02) contrast(1.05) brightness(.98)
 }
 .sidephoto::before,
 .sidephoto::after{ content:""; position:absolute; inset:0; pointer-events:none; }
