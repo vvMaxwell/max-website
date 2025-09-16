@@ -182,7 +182,7 @@ h1{font-size:1.4rem; margin:.25rem 0 .15rem}
 .sidephoto > img{
   position:absolute; inset:0;
   height:100%; width:auto; display:block; object-fit:cover;
-  object-position: 86% center; /* crops more of the left so you stay visible */
+  object-position: 70% center; /* crops more of the left so you stay visible */
   filter:saturate(1.02) contrast(1.05) brightness(.98);
 }
 .sidephoto::before,
