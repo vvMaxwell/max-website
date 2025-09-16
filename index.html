@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Max Wroblewsky</title>
   <meta name="description" content="Max Wroblewsky — IT Professional, Tech Support Specialist @ Tech Support Calgary. Calgary, AB, Canada." />
-  <link rel="stylesheet" href="style.css?v=4" />
+  <link rel="stylesheet" href="style.css?v=5" />
 </head>
 <body>
   <!-- Background canvas -->
@@ -46,7 +46,132 @@
       <details class="accordion">
         <summary>Personal / Homelab Projects</summary>
         <div class="acc-body">
-          <p class="muted">Coming soon.</p>
+          <p class="muted" style="margin-bottom:10px">
+            Proxmox cluster, self-hosted services, and a Cisco router/switch lab.
+          </p>
+
+          <!-- Project list -->
+          <ul class="project-list">
+
+            <!-- Project -->
+            <li class="project">
+              <details>
+                <summary>
+                  <span class="dot"></span>
+                  <span class="title">Proxmox Cluster</span>
+                  <span class="meta">2 hosts • multiple VMs/CTs</span>
+                </summary>
+                <div class="project-body">
+                  <div class="project-text">
+                    <p>
+                      Two Proxmox nodes clustered with shared storage pools and VLAN-segmented networks.
+                      I run game servers, utility containers, and media/AI workloads on it.
+                    </p>
+                    <p class="muted small">
+                      Example VMs: <strong>plex-serv</strong>, <strong>mail-serv</strong>, <strong>ai-serv</strong>, <strong>adblock-serv</strong>, <strong>retropie-serv</strong>.
+                    </p>
+                  </div>
+                  <figure class="project-thumb">
+                    <img src="./images/proxmox-tree.png" alt="Proxmox VM/CT tree" loading="lazy">
+                    <figcaption class="muted small">VM/CT inventory</figcaption>
+                  </figure>
+                </div>
+              </details>
+            </li>
+
+            <!-- Project -->
+            <li class="project">
+              <details>
+                <summary>
+                  <span class="dot"></span>
+                  <span class="title">Plex Media Server</span>
+                  <span class="meta">RAID10 storage • hardware-accel</span>
+                </summary>
+                <div class="project-body">
+                  <div class="project-text">
+                    <p>
+                      Dedicated VM with RAID-10 backing for media and tuned networking for smooth
+                      local/remote playback. Automated library updates and periodic backups.
+                    </p>
+                  </div>
+                  <figure class="project-thumb">
+                    <img src="./images/plex-dashboard.png" alt="Plex dashboard" loading="lazy">
+                    <figcaption class="muted small">Dashboard view</figcaption>
+                  </figure>
+                </div>
+              </details>
+            </li>
+
+            <!-- Project -->
+            <li class="project">
+              <details>
+                <summary>
+                  <span class="dot"></span>
+                  <span class="title">Mail Server (Mailcow)</span>
+                  <span class="meta">DKIM/DMARC/SPF • backups</span>
+                </summary>
+                <div class="project-body">
+                  <div class="project-text">
+                    <p>
+                      Self-hosted Mailcow stack on a hardened VM. Reverse proxy, DNS, DKIM/DMARC/SPF configured;
+                      off-box snapshots and encrypted backups to cold storage.
+                    </p>
+                  </div>
+                  <figure class="project-thumb">
+                    <img src="./images/mailcow.png" alt="Mailcow UI" loading="lazy">
+                    <figcaption class="muted small">Mailcow UI</figcaption>
+                  </figure>
+                </div>
+              </details>
+            </li>
+
+            <!-- Project -->
+            <li class="project">
+              <details>
+                <summary>
+                  <span class="dot"></span>
+                  <span class="title">AI / Inference Node</span>
+                  <span class="meta">text-gen + image-gen</span>
+                </summary>
+                <div class="project-body">
+                  <div class="project-text">
+                    <p>
+                      Local LLM + image generation stack for experimentation and private workflows.
+                      Runs side-by-side with other services via resource limits and node affinity.
+                    </p>
+                  </div>
+                  <figure class="project-thumb">
+                    <img src="./images/ai-node.png" alt="AI node screen" loading="lazy">
+                    <figcaption class="muted small">Model dashboard</figcaption>
+                  </figure>
+                </div>
+              </details>
+            </li>
+
+            <!-- Project -->
+            <li class="project">
+              <details>
+                <summary>
+                  <span class="dot"></span>
+                  <span class="title">Cisco Lab (Router & Switch)</span>
+                  <span class="meta">VLANs • trunking • ACLs</span>
+                </summary>
+                <div class="project-body">
+                  <div class="project-text">
+                    <p>
+                      ISR router and Catalyst switch for routing, inter-VLAN, and access control testing.
+                      Integrated with the homelab via tagged uplinks to the Proxmox hosts.
+                    </p>
+                  </div>
+                  <figure class="project-thumb">
+                    <img src="./images/cisco-lab.png" alt="Cisco router and switch" loading="lazy">
+                    <figcaption class="muted small">Lab rack</figcaption>
+                  </figure>
+                </div>
+              </details>
+            </li>
+
+          </ul>
         </div>
       </details>
     </section>
