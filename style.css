@@ -9,7 +9,7 @@
   --line:#202636;
 
   /* right photo rail */
-  --sidephoto-w: clamp(240px, 23vw, 400px);
+  --sidephoto-w: clamp(260px, 26vw, 440px);
   --sidephoto-fade: 84%;
 }
 
@@ -182,7 +182,7 @@ h1{font-size:1.4rem; margin:.25rem 0 .15rem}
 .sidephoto > img{
   position:absolute; inset:0;
   height:100%; width:auto; display:block; object-fit:cover;
-  object-position: 98% center; /* crops more of the left so you stay visible */
+  object-position: 88% center; /* crops more of the left so you stay visible */
   filter:saturate(1.02) contrast(1.05) brightness(.98);
 }
 .sidephoto::before,
