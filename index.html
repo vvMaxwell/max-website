@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Max Wroblewsky</title>
   <meta name="description" content="Max Wroblewsky — IT Professional, Tech Support Specialist @ Tech Support Calgary. Calgary, AB, Canada." />
-  <link rel="stylesheet" href="style.css?v=3" />
+  <link rel="stylesheet" href="style.css?v=4" />
 </head>
 <body>
   <!-- Background canvas -->
@@ -28,25 +28,33 @@
   <main class="main">
     <header class="hero">
       <h2>Projects</h2>
-      <p class="muted">Two tracks. Click later to expand details, screenshots, and notes.</p>
+      <p class="muted">Two tracks. Click to expand details, screenshots, and notes.</p>
     </header>
 
     <!-- PROFESSIONAL / WORK PROJECTS -->
     <section class="panel" id="work">
-      <h3>Professional / Work Projects</h3>
-      <p class="muted">Coming soon.</p>
+      <details class="accordion" open>
+        <summary>Professional / Work Projects</summary>
+        <div class="acc-body">
+          <p class="muted">Coming soon.</p>
+        </div>
+      </details>
     </section>
 
     <!-- PERSONAL / HOMELAB PROJECTS -->
     <section class="panel" id="homelab">
-      <h3>Personal / Homelab Projects</h3>
-      <p class="muted">Coming soon.</p>
+      <details class="accordion">
+        <summary>Personal / Homelab Projects</summary>
+        <div class="acc-body">
+          <p class="muted">Coming soon.</p>
+        </div>
+      </details>
     </section>
   </main>
 
-  <!-- RIGHT-SIDE VERTICAL PHOTO -->
+  <!-- RIGHT-SIDE VERTICAL PHOTO (decorative) -->
   <aside class="sidephoto" aria-hidden="true">
-    <img src="./Headshot2.jpg" alt="Presentation photo of Max Wroblewsky">
+    <img src="./Headshot2.jpg" alt="" role="presentation">
   </aside>
 
   <!-- Lightweight particle background -->
