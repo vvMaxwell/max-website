@@ -8,9 +8,10 @@
   --accent:#4ea1ff;
   --line:#202636;
 
-  /* right photo rail */
-  --sidephoto-w: clamp(260px, 26vw, 440px);
-  --sidephoto-fade: 84%;
+  /* Right photo rail controls */
+  --sidephoto-w: clamp(240px, 21vw, 320px); /* rail width on desktop */
+  --sidephoto-shift: 150px;                  /* slide image left inside rail */
+  --sidephoto-fade: 92%;                     /* mask fade extent */
 }
 
 *{box-sizing:border-box}
@@ -63,8 +64,8 @@ h1{font-size:1.4rem; margin:.25rem 0 .15rem}
 .main{
   position:relative; z-index:2;
   margin-left:min(320px,92vw);
-  padding:28px 28px 120px; /* extra bottom space for open dropdowns */
-  margin-right:0; /* set on wide screens below */
+  padding:28px 28px 120px; /* extra bottom room for open dropdowns */
+  margin-right:0;          /* set on wide screens below */
 }
 
 .hero h2{font-size:28px; margin:0 0 8px}
@@ -104,20 +105,18 @@ h1{font-size:1.4rem; margin:.25rem 0 .15rem}
   background:#0b1016;
   overflow:hidden;
 }
-
 .project > details > summary{
   list-style:none; cursor:pointer; display:grid;
-  grid-template-columns: 16px 1fr auto; /* arrow | title | meta (skills) */
-  align-items:center;
-  gap:10px; padding:12px 12px; font-weight:600; color:#e3eaf6;
+  grid-template-columns: 16px 1fr auto; /* arrow | title | skills (meta) */
+  align-items:center; gap:10px; padding:12px 12px;
+  font-weight:600; color:#e3eaf6;
 }
 .project > details > summary::-webkit-details-marker{display:none}
 .project > details[open] > summary{ background:#0e141c; }
 
 /* Arrow indicator */
 .project > details > summary .arrow{
-  display:inline-block;
-  width:0; height:0; margin-right:2px;
+  display:inline-block; width:0; height:0; margin-right:2px;
   border-left:6px solid #8fa7c7;
   border-top:4px solid transparent;
   border-bottom:4px solid transparent;
@@ -146,24 +145,17 @@ h1{font-size:1.4rem; margin:.25rem 0 .15rem}
 
 /* ---------- Phone / small screens ---------- */
 @media (max-width:900px){
-  /* Sidebar becomes a top header */
   .sidebar{
     position:static; width:100%;
     border-right:none; border-bottom:1px solid var(--line);
-    padding:18px 16px;
-    align-items:center;
+    padding:18px 16px; align-items:center;
   }
   .links{flex-direction:row; width:100%; max-width:520px}
   .links a{flex:1; text-align:center}
 
-  /* Content spans full width */
   .main{ margin-left:0; margin-right:0; padding:18px 16px 100px; }
-
-  /* Hide the decorative right photo on phones */
-  .sidephoto{ display:none; }
+  .sidephoto{ display:none; } /* hide decorative photo on phones */
 }
-
-/* Stack the text+image inside each project on narrow widths */
 @media (max-width:720px){
   .project-body{ grid-template-columns: 1fr; }
 }
@@ -179,15 +171,23 @@ h1{font-size:1.4rem; margin:.25rem 0 .15rem}
   box-shadow:inset 12px 0 24px rgba(0,0,0,.35);
   isolation:isolate;
 }
-/* Right-side “cinematic” photo panel */
+/* Slide the image left inside the rail so you're centered in-frame */
 .sidephoto > img{
-  position:absolute; inset:0;
-  height:100%; width:auto; display:block; object-fit:cover;
-  object-position: 95% center;  /* was 70% */
-  filter:saturate(1.02) contrast(1.05) brightness(.98)
+  position:absolute; top:0; left:0;
+  height:100%;
+  width:auto;                /* keep natural aspect */
+  min-width: calc(100% + var(--sidephoto-shift)); /* avoid gaps when sliding */
+  object-fit:cover;
+  object-position:center center;
+  transform: translateX(calc(-1 * var(--sidephoto-shift)));
+  filter:saturate(1.02) contrast(1.05) brightness(.98);
 }
-.sidephoto::before,
-.sidephoto::after{ content:""; position:absolute; inset:0; pointer-events:none; }
+
+/* Soft overlays & feathered inner edge */
+.sidephoto::after,
+.sidephoto::before{
+  content:""; position:absolute; inset:0; pointer-events:none;
+}
 .sidephoto::after{
   background:linear-gradient(180deg,
     rgba(15,17,21,.38) 0%,
@@ -203,13 +203,15 @@ h1{font-size:1.4rem; margin:.25rem 0 .15rem}
     rgba(15,17,21,0) 100%);
   mix-blend-mode:multiply;
 }
+
+/* Smooth mask fade on modern browsers */
 @supports (mask-image: linear-gradient(#000,#000)){
   .sidephoto{
     mask-image: linear-gradient(to left, #000 var(--sidephoto-fade), rgba(0,0,0,0));
   }
 }
 
-/* ---------- Keep main content clear of the photo on wide screens ---------- */
+/* ---------- Keep content clear of the rail on wide screens ---------- */
 @media (min-width:901px){
   .main{ margin-right: calc(var(--sidephoto-w) + 24px); }
 }
