@@ -12,100 +12,8 @@
 </head>
 <body>
   <div class="scene" aria-hidden="true">
-    <svg class="landscape" viewBox="0 0 1600 950" preserveAspectRatio="xMidYMid slice" role="presentation">
-      <defs>
-        <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#55ace6" />
-          <stop offset="40%" stop-color="#9fd7fa" />
-          <stop offset="68%" stop-color="#e7f6ff" />
-          <stop offset="100%" stop-color="#d8efb6" />
-        </linearGradient>
-        <linearGradient id="hillBack" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#a9ca8d" />
-          <stop offset="100%" stop-color="#7baa69" />
-        </linearGradient>
-        <linearGradient id="hillMid" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#93c56f" />
-          <stop offset="100%" stop-color="#68994e" />
-        </linearGradient>
-        <linearGradient id="hillFront" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#8ec55d" />
-          <stop offset="100%" stop-color="#5b8c42" />
-        </linearGradient>
-        <linearGradient id="pathGrad" x1="0" y1="0" x2="0.9" y2="1">
-          <stop offset="0%" stop-color="#e8d7b8" />
-          <stop offset="100%" stop-color="#cbb28a" />
-        </linearGradient>
-        <linearGradient id="wallGrad" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="#e2d1a8" />
-          <stop offset="100%" stop-color="#b99b69" />
-        </linearGradient>
-        <radialGradient id="sunGlow" cx="0.22" cy="0.22" r="0.22">
-          <stop offset="0%" stop-color="#fff9d5" stop-opacity="0.95" />
-          <stop offset="45%" stop-color="#fff4bc" stop-opacity="0.38" />
-          <stop offset="100%" stop-color="#fff4bc" stop-opacity="0" />
-        </radialGradient>
-        <filter id="softBlur">
-          <feGaussianBlur stdDeviation="14" />
-        </filter>
-        <filter id="cloudBlur">
-          <feGaussianBlur stdDeviation="1.5" />
-        </filter>
-      </defs>
-
-      <rect width="1600" height="950" fill="url(#skyGrad)" />
-      <ellipse cx="330" cy="160" rx="280" ry="220" fill="url(#sunGlow)" />
-
-      <g filter="url(#cloudBlur)" opacity="0.95">
-        <path d="M190 188c27-38 92-40 132-7 25-18 72-16 96 14 27-6 58 5 69 27 18 36-20 61-55 61H244c-62 0-92-56-54-95z" fill="#ffffff" fill-opacity="0.88" />
-        <path d="M920 320c18-24 61-25 88-4 18-13 47-12 63 10 24-5 48 6 56 23 12 27-14 46-41 46H955c-46 0-69-37-35-75z" fill="#ffffff" fill-opacity="0.82" />
-        <path d="M1280 250c19-24 67-26 96-5 16-13 42-11 56 7 21-4 43 6 49 20 13 24-12 42-36 42h-144c-46 0-65-36-21-64z" fill="#ffffff" fill-opacity="0.72" />
-      </g>
-
-      <path d="M0 450C292 400 522 406 833 417c269 10 529 45 767 80v182H0V450z" fill="url(#hillBack)" />
-      <path d="M0 595c267-85 526-108 814-97 301 12 536 60 786 121v200H0V595z" fill="url(#hillMid)" />
-      <path d="M0 740c313-84 608-109 909-93 294 16 504 54 691 110v193H0V740z" fill="url(#hillFront)" />
-
-      <path d="M1242 245h260v470h-184c6-74 17-143 34-208 18-67 39-126 64-177H1242V245z" fill="url(#wallGrad)" opacity="0.95" />
-      <path d="M1210 237h318l-12 30h-298z" fill="#8f5a31" />
-
-      <path d="M1185 86c89-21 205 9 265 61 78-40 224 15 242 134 88 18 121 145 60 223-45 57-101 74-175 59-54 73-160 72-225 24-52 36-121 33-176-6-110 37-237-35-258-150-27-146 123-273 267-230z" fill="#4b7c47" />
-      <path d="M1114 110c75-18 168 8 221 53 66-33 183 11 199 111 73 15 98 119 50 186-37 49-81 64-140 52-44 62-132 62-185 22-42 29-98 27-143-4-90 30-192-29-210-126-20-120 98-224 208-188z" fill="#7ead5f" opacity="0.96" />
-      <path d="M1424 83c59-11 128 7 165 37 53-28 144 10 156 88 61 13 82 95 40 149-28 35-60 47-109 38-34 46-101 47-142 17-34 24-76 21-111-3-74 24-155-22-168-103-16-96 78-179 169-156z" fill="#31573d" opacity="0.95" />
-
-      <path d="M1210 128c14 0 26 12 26 26l-24 312h-54l38-312c2-14 8-26 14-26z" fill="#6e4a2d" />
-
-      <path d="M842 904c-172-10-286-42-331-76 30-88 100-161 207-233 92-62 172-164 230-302 87-16 161-7 223 20-55 144-114 258-193 353-68 82-93 132-136 238z" fill="url(#pathGrad)" opacity="0.94" />
-      <g opacity="0.88">
-        <ellipse cx="708" cy="825" rx="52" ry="72" fill="#d9c29c" />
-        <ellipse cx="782" cy="740" rx="54" ry="64" fill="#e6d2ae" />
-        <ellipse cx="852" cy="649" rx="48" ry="58" fill="#e4d0aa" />
-        <ellipse cx="915" cy="570" rx="43" ry="51" fill="#e9d8b6" />
-        <ellipse cx="978" cy="518" rx="37" ry="45" fill="#eadcbc" />
-      </g>
-
-      <g opacity="0.92">
-        <path d="M0 840c103-21 191-24 287-1 70 17 145 19 232 8 107-15 179-18 311-7 84 7 171-5 252-25 126-31 217-24 332 7 69 19 121 26 186 26v102H0V840z" fill="#7fba4f" />
-      </g>
-
-      <g opacity="0.96">
-        <circle cx="1434" cy="430" r="6" fill="#ff7d4b" />
-        <circle cx="1380" cy="420" r="5" fill="#ffd45b" />
-        <circle cx="1334" cy="392" r="5" fill="#f25345" />
-        <circle cx="1286" cy="458" r="4" fill="#fff7e3" />
-        <circle cx="235" cy="860" r="7" fill="#ffd45b" />
-        <circle cx="173" cy="825" r="5" fill="#ff9157" />
-        <circle cx="110" cy="875" r="6" fill="#fff7e3" />
-        <circle cx="63" cy="838" r="6" fill="#ffca5a" />
-        <circle cx="1521" cy="892" r="6" fill="#fff7e3" />
-        <circle cx="1468" cy="871" r="6" fill="#ffd55a" />
-        <circle cx="1412" cy="832" r="5" fill="#ff9e61" />
-        <circle cx="1547" cy="848" r="6" fill="#ffca5a" />
-      </g>
-
-      <ellipse cx="398" cy="172" rx="170" ry="120" fill="#f6fae7" opacity="0.38" filter="url(#softBlur)" />
-    </svg>
-    <div class="light-bloom"></div>
+    <div class="scene-image"></div>
+    <div class="scene-overlay"></div>
     <div class="drift-petals">
       <span></span>
       <span></span>
@@ -127,11 +35,10 @@
 
   <main class="page" id="home">
     <section class="scene-copy" aria-label="Welcome">
-      <p class="eyebrow">Scenic Portfolio</p>
-      <h1>A quiet hillside garden with my work tucked inside.</h1>
+      <p class="eyebrow">Max Wroblewsky</p>
+      <h1>A quiet corner of the internet.</h1>
       <p class="scene-description">
-        The scenery is the main event here. My projects and links are just small stops
-        along the path if you feel like exploring them.
+        Projects and links are tucked away if you want them.
       </p>
     </section>
 
