@@ -4,489 +4,488 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Max Wroblewsky</title>
-  <meta name="description" content="Max Wroblewsky — IT Professional, Tech Support Specialist @ Tech Support Calgary. Calgary, AB, Canada." />
-  <!-- bump query to bust cache after deploy -->
-  <link rel="stylesheet" href="style.css?v=10" />
+  <meta
+    name="description"
+    content="Max Wroblewsky - IT professional portfolio with projects, resume, LinkedIn, email, and Calgary contact details."
+  />
+  <link rel="stylesheet" href="style.css?v=11" />
 </head>
 <body>
-  <!-- Background canvas -->
-  <canvas id="bg" aria-hidden="true"></canvas>
   <div class="scene" aria-hidden="true">
-    <div class="sky-glow sky-glow-left"></div>
-    <div class="sky-glow sky-glow-right"></div>
-    <div class="moon-haze"></div>
-    <div class="shooting-stars">
-      <span class="shooting-star shooting-star-1"></span>
-      <span class="shooting-star shooting-star-2"></span>
-      <span class="shooting-star shooting-star-3"></span>
-      <span class="shooting-star shooting-star-4"></span>
-      <span class="shooting-star shooting-star-5"></span>
+    <div class="sky"></div>
+    <div class="sun-glow"></div>
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+    <div class="cloud cloud-3"></div>
+    <div class="hill hill-back"></div>
+    <div class="hill hill-mid"></div>
+    <div class="hill hill-front"></div>
+    <div class="tree-canopy"></div>
+    <div class="stone-path"></div>
+    <div class="wildflowers wildflowers-left"></div>
+    <div class="wildflowers wildflowers-right"></div>
+    <div class="floating-seeds">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-    <div class="forest forest-back"></div>
-    <div class="forest forest-mid"></div>
-    <div class="forest forest-front"></div>
-    <div class="path-glow"></div>
   </div>
 
-  <!-- LEFT SIDEBAR / becomes top header on mobile -->
-<!-- LEFT SIDEBAR -->
-<aside class="sidebar">
-  <img class="avatar" src="./assets/headshots/headshot-main.jpg" alt="Photo of Max Wroblewsky" />
-  <h1>Max Wroblewsky</h1>
-  <p class="title">IT Professional — Tech Support Specialist @ Tech Support Calgary</p>
-  <p class="location">Calgary, AB</p>
+  <header class="site-header">
+    <a class="brand" href="#home">Max Wroblewsky</a>
+    <nav class="top-nav" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#connect">Connect</a>
+    </nav>
+  </header>
 
-  <div class="links">
-    <a class="ghost" href="./assets/docs/Max-Wroblewsky-Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
-    <a class="ghost" href="https://www.linkedin.com/in/max-wroblewsky-a6492a345/" target="_blank" rel="noopener">LinkedIn</a>
-    <a class="ghost" href="mailto:max@wroblewsky.com">Email</a>
-  </div>
-</aside>
-
-
-  <!-- MAIN CONTENT -->
-  <main class="main">
-    <header class="hero">
-      <h2>Projects</h2>
-      <p class="muted">This is a list of projects from both my professional and personal work.</p>
-    </header>
-
-    <!-- PROFESSIONAL / WORK PROJECTS -->
-    <section class="panel" id="work">
-      <details class="accordion" open>
-        <summary>Professional / Work Projects</summary>
-        <div class="acc-body">
-          <p class="project-hint">Click any project to open a popup with details and screenshots.</p>
-          <ul class="project-list">
-            <li class="project">
-              <button class="project-trigger" type="button" data-dialog="project-endpoint" aria-haspopup="dialog">
-                <span class="project-trigger-main">
-                  <span class="title">Endpoint Management</span>
-                </span>
-                <span class="meta">Device Management - Microsoft Defender</span>
-              </button>
-            </li>
-            <li class="project">
-              <button class="project-trigger" type="button" data-dialog="project-infrastructure" aria-haspopup="dialog">
-                <span class="project-trigger-main">
-                  <span class="title">Client Office Infrastructure Rebuild</span>
-                </span>
-                <span class="meta">IT Infrastructure - Networking</span>
-              </button>
-            </li>
-            <li class="project">
-              <button class="project-trigger" type="button" data-dialog="project-servicenow" aria-haspopup="dialog">
-                <span class="project-trigger-main">
-                  <span class="title">ServiceNow Service Desk</span>
-                </span>
-                <span class="meta">ITIL - ServiceNow</span>
-              </button>
-            </li>
-            <li class="project">
-              <button class="project-trigger" type="button" data-dialog="project-network" aria-haspopup="dialog">
-                <span class="project-trigger-main">
-                  <span class="title">Multi-Site Enterprise Network Design</span>
-                </span>
-                <span class="meta">Network Design - Cisco</span>
-              </button>
-            </li>
-            <li class="project">
-              <button class="project-trigger" type="button" data-dialog="project-azure" aria-haspopup="dialog">
-                <span class="project-trigger-main">
-                  <span class="title">WIT Cloud Transformation</span>
-                </span>
-                <span class="meta">Cloud Architecture - Azure</span>
-              </button>
-            </li>
-            <li class="project">
-              <button class="project-trigger" type="button" data-dialog="project-capstone" aria-haspopup="dialog">
-                <span class="project-trigger-main">
-                  <span class="title">Capstone Project</span>
-                </span>
-                <span class="meta">Volunteer App - PowerApps</span>
-              </button>
-            </li>
-            <li class="project">
-              <button class="project-trigger" type="button" data-dialog="project-security" aria-haspopup="dialog">
-                <span class="project-trigger-main">
-                  <span class="title">Advanced Network Security Design</span>
-                </span>
-                <span class="meta">Firewall Security - Threat Intelligence</span>
-              </button>
-            </li>
-          </ul>
+  <main class="page-shell">
+    <section class="hero" id="home">
+      <div class="hero-card story-card">
+        <div class="hero-card-top">
+          <img
+            class="avatar"
+            src="./assets/headshots/headshot-main.jpg"
+            alt="Photo of Max Wroblewsky"
+          />
+          <div>
+            <p class="eyebrow">Calgary, Alberta</p>
+            <h1>Max Wroblewsky</h1>
+            <p class="hero-role">IT Professional and Tech Support Specialist</p>
+          </div>
         </div>
-      </details>
+        <p class="hero-copy">
+          I build and support dependable systems, networks, and user experiences.
+          This site is designed like a garden path: a calm place to explore my work,
+          connect with me, and walk through the projects I am most proud of.
+        </p>
+        <div class="hero-actions">
+          <a class="garden-button primary" href="./assets/docs/Max-Wroblewsky-Resume.pdf" target="_blank" rel="noopener">Open Resume</a>
+          <a class="garden-button" href="#projects">View Projects</a>
+          <a class="garden-button" href="mailto:max@wroblewsky.com">Send Email</a>
+        </div>
+      </div>
+
+      <aside class="hero-photo story-card">
+        <img
+          src="./assets/headshots/headshot-side.jpg"
+          alt="Max Wroblewsky presenting in a classroom"
+        />
+        <div class="photo-caption">
+          <p class="eyebrow">A little more about me</p>
+          <p>I enjoy building polished, practical solutions and presenting ideas clearly.</p>
+        </div>
+      </aside>
     </section>
 
-    <!-- PERSONAL / HOMELAB PROJECTS -->
-    <section class="panel" id="homelab">
-      <details class="accordion">
-        <summary>Personal / Homelab Projects</summary>
-        <div class="acc-body">
-          <p class="muted" style="margin-bottom:10px">
-            Proxmox cluster, self-hosted services, and a Cisco router/switch lab.
-          </p>
-          <p class="project-hint">Click any project to open a popup with details and screenshots.</p>
+    <section class="info-grid" id="about">
+      <article class="story-card info-card">
+        <p class="eyebrow">What I Do</p>
+        <h2>Technical support with a systems mindset</h2>
+        <p>
+          My background spans endpoint management, networking, cloud projects,
+          service desk workflows, and hands-on infrastructure support. I like
+          clean documentation, stable systems, and making technology easier for people.
+        </p>
+      </article>
 
-          <ul class="project-list">
-            <li class="project">
-              <button class="project-trigger" type="button" data-dialog="project-proxmox" aria-haspopup="dialog">
-                <span class="project-trigger-main">
-                  <span class="title">Proxmox Cluster</span>
-                </span>
-                <span class="meta">RAID 10 - multiple VMs/CTs</span>
-              </button>
-            </li>
-            <li class="project">
-              <button class="project-trigger" type="button" data-dialog="project-plex" aria-haspopup="dialog">
-                <span class="project-trigger-main">
-                  <span class="title">Plex Media Server</span>
-                </span>
-                <span class="meta">Media Server - Remote Streaming</span>
-              </button>
-            </li>
-            <li class="project">
-              <button class="project-trigger" type="button" data-dialog="project-mailcow" aria-haspopup="dialog">
-                <span class="project-trigger-main">
-                  <span class="title">Mail Server (Mailcow)</span>
-                </span>
-                <span class="meta">DKIM/DMARC/SPF - Backups</span>
-              </button>
-            </li>
-            <li class="project">
-              <button class="project-trigger" type="button" data-dialog="project-ai" aria-haspopup="dialog">
-                <span class="project-trigger-main">
-                  <span class="title">AI / LLM</span>
-                </span>
-                <span class="meta">Text Generation + Image Generation</span>
-              </button>
-            </li>
-            <li class="project">
-              <button class="project-trigger" type="button" data-dialog="project-cisco-lab" aria-haspopup="dialog">
-                <span class="project-trigger-main">
-                  <span class="title">Cisco Lab (Router &amp; Switch)</span>
-                </span>
-                <span class="meta">VLANs - trunking - ACLs</span>
-              </button>
-            </li>
-          </ul>
+      <article class="story-card info-card">
+        <p class="eyebrow">Where I Work Best</p>
+        <h2>Operations, support, and project delivery</h2>
+        <p>
+          I am comfortable moving between user-facing support and deeper technical work:
+          from resolving incidents and configuring tools to building out environments and labs.
+        </p>
+      </article>
+
+      <article class="story-card info-card">
+        <p class="eyebrow">Home Base</p>
+        <h2>Calgary, AB</h2>
+        <p>
+          Based in Calgary and always learning through personal lab projects, cloud experiments,
+          and practical infrastructure builds that sharpen my day-to-day skills.
+        </p>
+      </article>
+    </section>
+
+    <section class="projects-section story-card" id="projects">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Projects Garden</p>
+          <h2>Walk through my work</h2>
         </div>
-      </details>
+        <p class="section-copy">
+          Select a path below to explore professional work or personal homelab projects.
+          Click any project card to open the full story.
+        </p>
+      </div>
+
+      <div class="project-tabs" role="tablist" aria-label="Project categories">
+        <button class="tab-button is-active" type="button" data-tab="work" role="tab" aria-selected="true">Professional / Work</button>
+        <button class="tab-button" type="button" data-tab="personal" role="tab" aria-selected="false">Personal / Homelab</button>
+      </div>
+
+      <div class="project-grid">
+        <button class="project-card" type="button" data-group="work" data-project="endpoint">
+          <img src="./images/Intune.png" alt="Endpoint management project thumbnail" />
+          <span class="project-card-body">
+            <span class="project-title">Endpoint Management</span>
+            <span class="project-meta">Device Management and Microsoft Defender</span>
+          </span>
+        </button>
+
+        <button class="project-card" type="button" data-group="work" data-project="infrastructure">
+          <img src="./images/client-infrastructure.png" alt="Infrastructure rebuild project thumbnail" />
+          <span class="project-card-body">
+            <span class="project-title">Client Office Infrastructure Rebuild</span>
+            <span class="project-meta">IT Infrastructure and Networking</span>
+          </span>
+        </button>
+
+        <button class="project-card" type="button" data-group="work" data-project="servicenow">
+          <img src="./images/servicenow.jpg" alt="ServiceNow project thumbnail" />
+          <span class="project-card-body">
+            <span class="project-title">ServiceNow Service Desk</span>
+            <span class="project-meta">ITIL and ServiceNow</span>
+          </span>
+        </button>
+
+        <button class="project-card" type="button" data-group="work" data-project="network">
+          <img src="./images/ciscopt.jpg" alt="Network design project thumbnail" />
+          <span class="project-card-body">
+            <span class="project-title">Multi-Site Enterprise Network Design</span>
+            <span class="project-meta">Network Design and Cisco</span>
+          </span>
+        </button>
+
+        <button class="project-card" type="button" data-group="work" data-project="azure">
+          <img src="./images/msazure.png" alt="Azure project thumbnail" />
+          <span class="project-card-body">
+            <span class="project-title">WIT Cloud Transformation</span>
+            <span class="project-meta">Cloud Architecture and Azure</span>
+          </span>
+        </button>
+
+        <button class="project-card" type="button" data-group="work" data-project="capstone">
+          <img src="./images/mspowerapp.png" alt="Capstone project thumbnail" />
+          <span class="project-card-body">
+            <span class="project-title">Capstone Project</span>
+            <span class="project-meta">Volunteer App and PowerApps</span>
+          </span>
+        </button>
+
+        <button class="project-card" type="button" data-group="work" data-project="security">
+          <img src="./images/paloalto.png" alt="Security project thumbnail" />
+          <span class="project-card-body">
+            <span class="project-title">Advanced Network Security Design</span>
+            <span class="project-meta">Firewall Security and Threat Intelligence</span>
+          </span>
+        </button>
+
+        <button class="project-card" type="button" data-group="personal" data-project="proxmox" hidden>
+          <img src="./images/proxmox-tree.png" alt="Proxmox project thumbnail" />
+          <span class="project-card-body">
+            <span class="project-title">Proxmox Cluster</span>
+            <span class="project-meta">RAID 10 and multiple VMs and containers</span>
+          </span>
+        </button>
+
+        <button class="project-card" type="button" data-group="personal" data-project="plex" hidden>
+          <img src="./images/plex-dashboard.jpg" alt="Plex project thumbnail" />
+          <span class="project-card-body">
+            <span class="project-title">Plex Media Server</span>
+            <span class="project-meta">Media Server and Remote Streaming</span>
+          </span>
+        </button>
+
+        <button class="project-card" type="button" data-group="personal" data-project="mailcow" hidden>
+          <img src="./images/mailcow.jpg" alt="Mailcow project thumbnail" />
+          <span class="project-card-body">
+            <span class="project-title">Mail Server (Mailcow)</span>
+            <span class="project-meta">DKIM, DMARC, SPF and Backups</span>
+          </span>
+        </button>
+
+        <button class="project-card" type="button" data-group="personal" data-project="ai" hidden>
+          <img src="./images/ai.png" alt="AI project thumbnail" />
+          <span class="project-card-body">
+            <span class="project-title">AI / LLM</span>
+            <span class="project-meta">Text generation and image generation</span>
+          </span>
+        </button>
+
+        <button class="project-card" type="button" data-group="personal" data-project="cisco-lab" hidden>
+          <img src="./images/cisco-lab.png" alt="Cisco lab project thumbnail" />
+          <span class="project-card-body">
+            <span class="project-title">Cisco Lab</span>
+            <span class="project-meta">VLANs, trunking and ACLs</span>
+          </span>
+        </button>
+      </div>
+    </section>
+
+    <section class="connect-section" id="connect">
+      <article class="story-card connect-card">
+        <p class="eyebrow">Connect</p>
+        <h2>Take the next step</h2>
+        <p>
+          If you want to talk about support work, projects, or opportunities,
+          the easiest route is below.
+        </p>
+        <div class="connect-links">
+          <a class="garden-button primary" href="mailto:max@wroblewsky.com">Email Me</a>
+          <a class="garden-button" href="https://www.linkedin.com/in/max-wroblewsky-a6492a345/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="garden-button" href="./assets/docs/Max-Wroblewsky-Resume.pdf" target="_blank" rel="noopener">Resume PDF</a>
+        </div>
+      </article>
+
+      <article class="story-card address-card">
+        <p class="eyebrow">Location</p>
+        <h2>Calgary, AB</h2>
+        <p>
+          Available for conversations around IT support, infrastructure work,
+          networking, cloud projects, and hands-on technical roles.
+        </p>
+      </article>
     </section>
   </main>
 
-  <div class="project-modals" aria-live="polite">
-    <dialog class="project-modal" id="project-endpoint" aria-labelledby="project-endpoint-title">
-      <article class="project-modal-card">
-        <button class="modal-close" type="button" aria-label="Close project details">X</button>
-        <p class="modal-kicker">Professional / Work Project</p>
-        <div class="modal-heading">
-          <h3 id="project-endpoint-title">Endpoint Management</h3>
-          <p class="meta">Device Management - Microsoft Defender</p>
-        </div>
-        <div class="project-modal-body">
-          <div class="project-text">
-            <p>Custom configured Intune policies and Microsoft Defender updates, strengthening endpoint security and compliance across user devices.</p>
-          </div>
-          <figure class="project-thumb">
-            <img src="./images/Intune.png" alt="Microsoft Intune and Defender configuration" loading="lazy">
-            <figcaption class="muted small">Intune &amp; Defender</figcaption>
-          </figure>
-        </div>
-      </article>
-    </dialog>
+  <footer class="site-footer">
+    <p>Max Wroblewsky</p>
+    <div class="footer-links">
+      <a href="./privacy.html">Privacy</a>
+      <a href="./terms.html">Terms</a>
+    </div>
+  </footer>
 
-    <dialog class="project-modal" id="project-infrastructure" aria-labelledby="project-infrastructure-title">
-      <article class="project-modal-card">
-        <button class="modal-close" type="button" aria-label="Close project details">X</button>
-        <p class="modal-kicker">Professional / Work Project</p>
-        <div class="modal-heading">
-          <h3 id="project-infrastructure-title">Client Office Infrastructure Rebuild</h3>
-          <p class="meta">IT Infrastructure - Networking</p>
-        </div>
-        <div class="project-modal-body">
-          <div class="project-text">
-            <p>Built a client's IT environment after an office move. Configured firewall, router, switches, and VOIP system; deployed two domain controllers; set up TVs with mini-PCs, and prepared end-user workstations with docks and cable management.</p>
-          </div>
-          <figure class="project-thumb">
-            <img src="./images/client-infrastructure.png" alt="Office networking and systems rebuild" loading="lazy">
-            <figcaption class="muted small">Infrastructure Rebuild</figcaption>
-          </figure>
-        </div>
-      </article>
-    </dialog>
+  <dialog class="project-dialog" id="project-dialog" aria-labelledby="project-dialog-title">
+    <article class="dialog-card">
+      <button class="dialog-close" type="button" aria-label="Close project details">X</button>
+      <div class="dialog-copy">
+        <p class="eyebrow" id="project-dialog-group">Project</p>
+        <h3 id="project-dialog-title"></h3>
+        <p class="dialog-meta" id="project-dialog-meta"></p>
+        <div id="project-dialog-text"></div>
+      </div>
+      <figure class="dialog-figure">
+        <img id="project-dialog-image" src="" alt="" />
+        <figcaption id="project-dialog-caption"></figcaption>
+      </figure>
+    </article>
+  </dialog>
 
-    <dialog class="project-modal" id="project-servicenow" aria-labelledby="project-servicenow-title">
-      <article class="project-modal-card">
-        <button class="modal-close" type="button" aria-label="Close project details">X</button>
-        <p class="modal-kicker">Professional / Work Project</p>
-        <div class="modal-heading">
-          <h3 id="project-servicenow-title">ServiceNow Service Desk</h3>
-          <p class="meta">ITIL - ServiceNow</p>
-        </div>
-        <div class="project-modal-body">
-          <div class="project-text">
-            <p>Worked in a simulated IT service desk environment using ServiceNow. Logged, categorized, and resolved incident tickets while following ITIL best practices for escalation and problem management.</p>
-          </div>
-          <figure class="project-thumb">
-            <img src="./images/servicenow.jpg" alt="ServiceNow service desk incident queue" loading="lazy">
-            <figcaption class="muted small">Service Desk Practice</figcaption>
-          </figure>
-        </div>
-      </article>
-    </dialog>
-
-    <dialog class="project-modal" id="project-network" aria-labelledby="project-network-title">
-      <article class="project-modal-card">
-        <button class="modal-close" type="button" aria-label="Close project details">X</button>
-        <p class="modal-kicker">Professional / Work Project</p>
-        <div class="modal-heading">
-          <h3 id="project-network-title">Multi-Site Enterprise Network Design</h3>
-          <p class="meta">Network Design - Cisco</p>
-        </div>
-        <div class="project-modal-body">
-          <div class="project-text">
-            <p>Built a logical multi-site enterprise network in Packet Tracer with VLANs, subnetting and summarization, redundant gateways, and mixed OSPF and EIGRP routing to meet scalability and security requirements.</p>
-          </div>
-          <figure class="project-thumb">
-            <img src="./images/ciscopt.jpg" alt="Packet Tracer enterprise network diagram" loading="lazy">
-            <figcaption class="muted small">Enterprise Topology</figcaption>
-          </figure>
-        </div>
-      </article>
-    </dialog>
-
-    <dialog class="project-modal" id="project-azure" aria-labelledby="project-azure-title">
-      <article class="project-modal-card">
-        <button class="modal-close" type="button" aria-label="Close project details">X</button>
-        <p class="modal-kicker">Professional / Work Project</p>
-        <div class="modal-heading">
-          <h3 id="project-azure-title">WIT Cloud Transformation</h3>
-          <p class="meta">Cloud Architecture - Azure</p>
-        </div>
-        <div class="project-modal-body">
-          <div class="project-text">
-            <p>Collaborated on a hybrid cloud design using Azure. Built Entra ID and RBAC layouts, resource groups, and secure cloud connectivity, with disaster recovery and monitoring. Delivered diagrams, a demo, and cost analysis to support cloud adoption.</p>
-          </div>
-          <figure class="project-thumb">
-            <img src="./images/msazure.png" alt="Azure architecture diagram" loading="lazy">
-            <figcaption class="muted small">Azure Hybrid Design</figcaption>
-          </figure>
-        </div>
-      </article>
-    </dialog>
-
-    <dialog class="project-modal" id="project-capstone" aria-labelledby="project-capstone-title">
-      <article class="project-modal-card">
-        <button class="modal-close" type="button" aria-label="Close project details">X</button>
-        <p class="modal-kicker">Professional / Work Project</p>
-        <div class="modal-heading">
-          <h3 id="project-capstone-title">Capstone Project</h3>
-          <p class="meta">Volunteer App - PowerApps</p>
-        </div>
-        <div class="project-modal-body">
-          <div class="project-text">
-            <p>Built a volunteer matching platform in Microsoft Azure and Power Apps with features like job postings, profiles, reviews, and a swipe-style matching algorithm to connect volunteers and organizations.</p>
-          </div>
-          <figure class="project-thumb">
-            <img src="./images/mspowerapp.png" alt="Power Apps volunteer matching interface" loading="lazy">
-            <figcaption class="muted small">Power Apps Prototype</figcaption>
-          </figure>
-        </div>
-      </article>
-    </dialog>
-
-    <dialog class="project-modal" id="project-security" aria-labelledby="project-security-title">
-      <article class="project-modal-card">
-        <button class="modal-close" type="button" aria-label="Close project details">X</button>
-        <p class="modal-kicker">Professional / Work Project</p>
-        <div class="modal-heading">
-          <h3 id="project-security-title">Advanced Network Security Design</h3>
-          <p class="meta">Firewall Security - Threat Intelligence</p>
-        </div>
-        <div class="project-modal-body">
-          <div class="project-text">
-            <p>Built a secure environment with Palo Alto firewalls, including geo-blocking, file and domain blocking, syslog forwarding, and threat feed integration. Implemented reconnaissance protection and researched disaster recovery options to strengthen overall resilience.</p>
-          </div>
-          <figure class="project-thumb">
-            <img src="./images/paloalto.png" alt="Palo Alto firewall security rules" loading="lazy">
-            <figcaption class="muted small">Palo Alto Security</figcaption>
-          </figure>
-        </div>
-      </article>
-    </dialog>
-
-    <dialog class="project-modal" id="project-proxmox" aria-labelledby="project-proxmox-title">
-      <article class="project-modal-card">
-        <button class="modal-close" type="button" aria-label="Close project details">X</button>
-        <p class="modal-kicker">Personal / Homelab Project</p>
-        <div class="modal-heading">
-          <h3 id="project-proxmox-title">Proxmox Cluster</h3>
-          <p class="meta">RAID 10 - multiple VMs and containers</p>
-        </div>
-        <div class="project-modal-body">
-          <div class="project-text">
-            <p>Two Proxmox nodes clustered with shared storage pools and VLAN-segmented networks. I run game servers, utility containers, and media and AI workloads on it.</p>
-            <p class="muted small">Example VMs: <strong>plex-serv</strong>, <strong>mail-serv</strong>, <strong>ai-serv</strong>, <strong>adblock-serv</strong>, <strong>retropie-serv</strong>.</p>
-          </div>
-          <figure class="project-thumb">
-            <img src="./images/proxmox-tree.png" alt="Proxmox virtual machine inventory" loading="lazy">
-            <figcaption class="muted small">Proxmox Inventory</figcaption>
-          </figure>
-        </div>
-      </article>
-    </dialog>
-
-    <dialog class="project-modal" id="project-plex" aria-labelledby="project-plex-title">
-      <article class="project-modal-card">
-        <button class="modal-close" type="button" aria-label="Close project details">X</button>
-        <p class="modal-kicker">Personal / Homelab Project</p>
-        <div class="modal-heading">
-          <h3 id="project-plex-title">Plex Media Server</h3>
-          <p class="meta">Media Server - Remote Streaming</p>
-        </div>
-        <div class="project-modal-body">
-          <div class="project-text">
-            <p>Dedicated VM for media and tuned networking for smooth local and remote playback. Automated library updates and periodic backups.</p>
-          </div>
-          <figure class="project-thumb">
-            <img src="./images/plex-dashboard.jpg" alt="Plex dashboard" loading="lazy">
-            <figcaption class="muted small">Plex Media Server</figcaption>
-          </figure>
-        </div>
-      </article>
-    </dialog>
-
-    <dialog class="project-modal" id="project-mailcow" aria-labelledby="project-mailcow-title">
-      <article class="project-modal-card">
-        <button class="modal-close" type="button" aria-label="Close project details">X</button>
-        <p class="modal-kicker">Personal / Homelab Project</p>
-        <div class="modal-heading">
-          <h3 id="project-mailcow-title">Mail Server (Mailcow)</h3>
-          <p class="meta">DKIM/DMARC/SPF - Backups</p>
-        </div>
-        <div class="project-modal-body">
-          <div class="project-text">
-            <p>Self-hosted Mailcow stack on a hardened VM. Reverse proxy, DNS, DKIM, DMARC, and SPF configured; off-box snapshots and encrypted backups to cold storage.</p>
-          </div>
-          <figure class="project-thumb">
-            <img src="./images/mailcow.jpg" alt="Mailcow interface" loading="lazy">
-            <figcaption class="muted small">Mail Server</figcaption>
-          </figure>
-        </div>
-      </article>
-    </dialog>
-
-    <dialog class="project-modal" id="project-ai" aria-labelledby="project-ai-title">
-      <article class="project-modal-card">
-        <button class="modal-close" type="button" aria-label="Close project details">X</button>
-        <p class="modal-kicker">Personal / Homelab Project</p>
-        <div class="modal-heading">
-          <h3 id="project-ai-title">AI / LLM</h3>
-          <p class="meta">Text Generation + Image Generation</p>
-        </div>
-        <div class="project-modal-body">
-          <div class="project-text">
-            <p>Local LLM and image generation stack for private workflows, experimentation, and continuous learning.</p>
-          </div>
-          <figure class="project-thumb">
-            <img src="./images/ai.png" alt="Local AI node screen" loading="lazy">
-            <figcaption class="muted small">Local LLM</figcaption>
-          </figure>
-        </div>
-      </article>
-    </dialog>
-
-    <dialog class="project-modal" id="project-cisco-lab" aria-labelledby="project-cisco-lab-title">
-      <article class="project-modal-card">
-        <button class="modal-close" type="button" aria-label="Close project details">X</button>
-        <p class="modal-kicker">Personal / Homelab Project</p>
-        <div class="modal-heading">
-          <h3 id="project-cisco-lab-title">Cisco Lab (Router &amp; Switch)</h3>
-          <p class="meta">VLANs - trunking - ACLs</p>
-        </div>
-        <div class="project-modal-body">
-          <div class="project-text">
-            <p>ISR router and Catalyst switch for routing, inter-VLAN, and access control testing. Integrated with the homelab via tagged uplinks to the Proxmox hosts.</p>
-          </div>
-          <figure class="project-thumb">
-            <img src="./images/cisco-lab.png" alt="Cisco router and switch" loading="lazy">
-            <figcaption class="muted small">Cisco Homelab</figcaption>
-          </figure>
-        </div>
-      </article>
-    </dialog>
-  </div>
-  <!-- RIGHT-SIDE VERTICAL PHOTO (decorative) -->
-  <aside class="sidephoto" aria-hidden="true">
-    <img src="./assets/headshots/headshot-side.jpg" alt="" role="presentation">
-  </aside>
-
-  <!-- Lightweight particle background -->
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script>
-    particlesJS("bg", {
-      particles: {
-        number: { value: 80, density: { enable: true, value_area: 800 } },
-        color: { value: "#dfffe0" },
-        size: { value: 2 },
-        move: { speed: 1 },
-        line_linked: { enable: true, opacity: 0.16, color: "#b4ef8e" }
+    const projectData = {
+      endpoint: {
+        group: "Professional / Work Project",
+        title: "Endpoint Management",
+        meta: "Device Management and Microsoft Defender",
+        image: "./images/Intune.png",
+        alt: "Microsoft Intune and Defender configuration",
+        caption: "Intune and Defender",
+        paragraphs: [
+          "Custom configured Intune policies and Microsoft Defender updates, strengthening endpoint security and compliance across user devices."
+        ]
       },
-      interactivity: {
-        events: { onhover: { enable: true, mode: "grab" } },
-        modes: { grab: { distance: 120, line_linked: { opacity: 0.28 } } }
+      infrastructure: {
+        group: "Professional / Work Project",
+        title: "Client Office Infrastructure Rebuild",
+        meta: "IT Infrastructure and Networking",
+        image: "./images/client-infrastructure.png",
+        alt: "Office networking and systems rebuild",
+        caption: "Infrastructure rebuild",
+        paragraphs: [
+          "Built a client's IT environment after an office move.",
+          "Configured firewall, router, switches, and VOIP systems, deployed two domain controllers, set up TVs with mini PCs, and prepared end-user workstations with docks and cable management."
+        ]
       },
-      retina_detect: true
-    });
-  </script>
-  <script>
-    const modalTriggers = document.querySelectorAll(".project-trigger");
-    const modals = document.querySelectorAll(".project-modal");
+      servicenow: {
+        group: "Professional / Work Project",
+        title: "ServiceNow Service Desk",
+        meta: "ITIL and ServiceNow",
+        image: "./images/servicenow.jpg",
+        alt: "ServiceNow incident queue",
+        caption: "Service desk practice",
+        paragraphs: [
+          "Worked in a simulated IT service desk environment using ServiceNow.",
+          "Logged, categorized, and resolved incident tickets while following ITIL best practices for escalation and problem management."
+        ]
+      },
+      network: {
+        group: "Professional / Work Project",
+        title: "Multi-Site Enterprise Network Design",
+        meta: "Network Design and Cisco",
+        image: "./images/ciscopt.jpg",
+        alt: "Packet Tracer enterprise network diagram",
+        caption: "Enterprise topology",
+        paragraphs: [
+          "Built a logical multi-site enterprise network in Packet Tracer with VLANs, subnetting and summarization, redundant gateways, and mixed OSPF and EIGRP routing.",
+          "The design focused on scalability, security, and practical enterprise architecture."
+        ]
+      },
+      azure: {
+        group: "Professional / Work Project",
+        title: "WIT Cloud Transformation",
+        meta: "Cloud Architecture and Azure",
+        image: "./images/msazure.png",
+        alt: "Azure architecture diagram",
+        caption: "Azure hybrid design",
+        paragraphs: [
+          "Collaborated on a hybrid cloud design using Azure.",
+          "Built Entra ID and RBAC layouts, resource groups, secure connectivity, disaster recovery planning, monitoring, and supporting diagrams and cost analysis."
+        ]
+      },
+      capstone: {
+        group: "Professional / Work Project",
+        title: "Capstone Project",
+        meta: "Volunteer App and PowerApps",
+        image: "./images/mspowerapp.png",
+        alt: "Power Apps volunteer matching interface",
+        caption: "Power Apps prototype",
+        paragraphs: [
+          "Built a volunteer matching platform in Microsoft Azure and Power Apps.",
+          "The project included job postings, profiles, reviews, and a swipe-style matching workflow to connect volunteers with organizations."
+        ]
+      },
+      security: {
+        group: "Professional / Work Project",
+        title: "Advanced Network Security Design",
+        meta: "Firewall Security and Threat Intelligence",
+        image: "./images/paloalto.png",
+        alt: "Palo Alto firewall security rules",
+        caption: "Palo Alto security",
+        paragraphs: [
+          "Built a secure environment with Palo Alto firewalls, including geo-blocking, file and domain blocking, syslog forwarding, and threat feed integration.",
+          "Implemented reconnaissance protection and researched disaster recovery options to strengthen overall resilience."
+        ]
+      },
+      proxmox: {
+        group: "Personal / Homelab Project",
+        title: "Proxmox Cluster",
+        meta: "RAID 10 and multiple VMs and containers",
+        image: "./images/proxmox-tree.png",
+        alt: "Proxmox inventory",
+        caption: "Proxmox inventory",
+        paragraphs: [
+          "Two Proxmox nodes clustered with shared storage pools and VLAN-segmented networks.",
+          "I run game servers, utility containers, media services, and AI workloads across the environment."
+        ]
+      },
+      plex: {
+        group: "Personal / Homelab Project",
+        title: "Plex Media Server",
+        meta: "Media Server and Remote Streaming",
+        image: "./images/plex-dashboard.jpg",
+        alt: "Plex dashboard",
+        caption: "Plex media server",
+        paragraphs: [
+          "Dedicated VM for media with tuned networking for smooth local and remote playback.",
+          "Automated library updates and periodic backups keep the service dependable."
+        ]
+      },
+      mailcow: {
+        group: "Personal / Homelab Project",
+        title: "Mail Server (Mailcow)",
+        meta: "DKIM, DMARC, SPF and Backups",
+        image: "./images/mailcow.jpg",
+        alt: "Mailcow interface",
+        caption: "Mail server",
+        paragraphs: [
+          "Self-hosted Mailcow stack on a hardened VM with reverse proxy and DNS configuration.",
+          "Configured DKIM, DMARC, SPF, off-box snapshots, and encrypted backups to cold storage."
+        ]
+      },
+      ai: {
+        group: "Personal / Homelab Project",
+        title: "AI / LLM",
+        meta: "Text generation and image generation",
+        image: "./images/ai.png",
+        alt: "Local AI node screen",
+        caption: "Local LLM",
+        paragraphs: [
+          "Local LLM and image generation stack for private workflows, experimentation, and continuous learning."
+        ]
+      },
+      "cisco-lab": {
+        group: "Personal / Homelab Project",
+        title: "Cisco Lab",
+        meta: "VLANs, trunking and ACLs",
+        image: "./images/cisco-lab.png",
+        alt: "Cisco router and switch",
+        caption: "Cisco homelab",
+        paragraphs: [
+          "ISR router and Catalyst switch for routing, inter-VLAN, and access control testing.",
+          "Integrated with the wider homelab through tagged uplinks to the Proxmox hosts."
+        ]
+      }
+    };
 
-    modalTriggers.forEach((trigger) => {
-      trigger.addEventListener("click", () => {
-        const dialog = document.getElementById(trigger.dataset.dialog);
-        if (dialog) {
-          dialog.showModal();
-          document.body.classList.add("modal-open");
-        }
+    const tabButtons = document.querySelectorAll(".tab-button");
+    const projectCards = document.querySelectorAll(".project-card");
+    const dialog = document.getElementById("project-dialog");
+    const dialogClose = dialog.querySelector(".dialog-close");
+    const dialogGroup = document.getElementById("project-dialog-group");
+    const dialogTitle = document.getElementById("project-dialog-title");
+    const dialogMeta = document.getElementById("project-dialog-meta");
+    const dialogText = document.getElementById("project-dialog-text");
+    const dialogImage = document.getElementById("project-dialog-image");
+    const dialogCaption = document.getElementById("project-dialog-caption");
+
+    const setTab = (group) => {
+      tabButtons.forEach((button) => {
+        const active = button.dataset.tab === group;
+        button.classList.toggle("is-active", active);
+        button.setAttribute("aria-selected", String(active));
       });
+
+      projectCards.forEach((card) => {
+        card.hidden = card.dataset.group !== group;
+      });
+    };
+
+    tabButtons.forEach((button) => {
+      button.addEventListener("click", () => setTab(button.dataset.tab));
     });
 
-    modals.forEach((dialog) => {
-      const closeButton = dialog.querySelector(".modal-close");
-
-      const closeDialog = () => {
-        dialog.close();
-        if (!document.querySelector(".project-modal[open]")) {
-          document.body.classList.remove("modal-open");
-        }
-      };
-
-      closeButton?.addEventListener("click", closeDialog);
-      dialog.addEventListener("close", () => {
-        if (!document.querySelector(".project-modal[open]")) {
-          document.body.classList.remove("modal-open");
-        }
-      });
-      dialog.addEventListener("click", (event) => {
-        const box = dialog.querySelector(".project-modal-card");
-        if (!box) {
+    projectCards.forEach((card) => {
+      card.addEventListener("click", () => {
+        const project = projectData[card.dataset.project];
+        if (!project) {
           return;
         }
-        const rect = box.getBoundingClientRect();
-        const clickedInside =
-          event.clientX >= rect.left &&
-          event.clientX <= rect.right &&
-          event.clientY >= rect.top &&
-          event.clientY <= rect.bottom;
-        if (!clickedInside) {
-          closeDialog();
-        }
+
+        dialogGroup.textContent = project.group;
+        dialogTitle.textContent = project.title;
+        dialogMeta.textContent = project.meta;
+        dialogText.innerHTML = project.paragraphs.map((paragraph) => `<p>${paragraph}</p>`).join("");
+        dialogImage.src = project.image;
+        dialogImage.alt = project.alt;
+        dialogCaption.textContent = project.caption;
+        dialog.showModal();
       });
     });
+
+    const closeDialog = () => dialog.close();
+
+    dialogClose.addEventListener("click", closeDialog);
+    dialog.addEventListener("click", (event) => {
+      const rect = dialog.querySelector(".dialog-card").getBoundingClientRect();
+      const clickedInside =
+        event.clientX >= rect.left &&
+        event.clientX <= rect.right &&
+        event.clientY >= rect.top &&
+        event.clientY <= rect.bottom;
+
+      if (!clickedInside) {
+        closeDialog();
+      }
+    });
+
+    setTab("work");
   </script>
 </body>
 </html>
