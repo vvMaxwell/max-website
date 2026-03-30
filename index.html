@@ -6,11 +6,27 @@
   <title>Max Wroblewsky</title>
   <meta name="description" content="Max Wroblewsky — IT Professional, Tech Support Specialist @ Tech Support Calgary. Calgary, AB, Canada." />
   <!-- bump query to bust cache after deploy -->
-  <link rel="stylesheet" href="style.css?v=9" />
+  <link rel="stylesheet" href="style.css?v=10" />
 </head>
 <body>
   <!-- Background canvas -->
   <canvas id="bg" aria-hidden="true"></canvas>
+  <div class="scene" aria-hidden="true">
+    <div class="sky-glow sky-glow-left"></div>
+    <div class="sky-glow sky-glow-right"></div>
+    <div class="moon-haze"></div>
+    <div class="shooting-stars">
+      <span class="shooting-star shooting-star-1"></span>
+      <span class="shooting-star shooting-star-2"></span>
+      <span class="shooting-star shooting-star-3"></span>
+      <span class="shooting-star shooting-star-4"></span>
+      <span class="shooting-star shooting-star-5"></span>
+    </div>
+    <div class="forest forest-back"></div>
+    <div class="forest forest-mid"></div>
+    <div class="forest forest-front"></div>
+    <div class="path-glow"></div>
+  </div>
 
   <!-- LEFT SIDEBAR / becomes top header on mobile -->
 <!-- LEFT SIDEBAR -->
@@ -413,14 +429,14 @@
     particlesJS("bg", {
       particles: {
         number: { value: 80, density: { enable: true, value_area: 800 } },
-        color: { value: "#ffb37b" },
+        color: { value: "#dfffe0" },
         size: { value: 2 },
         move: { speed: 1 },
-        line_linked: { enable: true, opacity: 0.24, color: "#ff9a5a" }
+        line_linked: { enable: true, opacity: 0.16, color: "#b4ef8e" }
       },
       interactivity: {
         events: { onhover: { enable: true, mode: "grab" } },
-        modes: { grab: { distance: 120, line_linked: { opacity: 0.38 } } }
+        modes: { grab: { distance: 120, line_linked: { opacity: 0.28 } } }
       },
       retina_detect: true
     });
