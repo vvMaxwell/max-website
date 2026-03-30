@@ -95,10 +95,11 @@
         <div class="dialog-header">
           <div>
             <p class="eyebrow">Projects</p>
-            <h2 id="projects-title">Small paths into the work</h2>
+            <h2 id="projects-title">Projects</h2>
           </div>
           <div class="project-tabs" role="tablist" aria-label="Project categories">
             <button class="tab-button is-active" type="button" data-tab="work" role="tab" aria-selected="true">Work</button>
+            <button class="tab-button" type="button" data-tab="school" role="tab" aria-selected="false">School</button>
             <button class="tab-button" type="button" data-tab="personal" role="tab" aria-selected="false">Personal</button>
           </div>
         </div>
@@ -112,7 +113,63 @@
             </span>
           </button>
 
-          <button class="project-card" type="button" data-group="work" data-project="infrastructure">
+          <button class="project-card" type="button" data-group="work" data-project="m365-admin">
+            <img src="./images/work-m365-admin.svg" alt="Microsoft 365 administration illustration" />
+            <span class="project-card-body">
+              <span class="project-title">Microsoft 365 Administration</span>
+              <span class="project-meta">Exchange, SharePoint, Entra ID, Azure, Purview, Security</span>
+            </span>
+          </button>
+
+          <button class="project-card" type="button" data-group="work" data-project="windows-server">
+            <img src="./images/work-windows-server.svg" alt="Windows Server administration illustration" />
+            <span class="project-card-body">
+              <span class="project-title">Windows Server Infrastructure</span>
+              <span class="project-meta">Active Directory, Group Policy, file services, DNS, DHCP</span>
+            </span>
+          </button>
+
+          <button class="project-card" type="button" data-group="work" data-project="endpoints">
+            <img src="./images/work-endpoints.svg" alt="Endpoint support illustration" />
+            <span class="project-card-body">
+              <span class="project-title">Endpoints and Workstations</span>
+              <span class="project-meta">Windows 10 and 11, macOS, hardware support</span>
+            </span>
+          </button>
+
+          <button class="project-card" type="button" data-group="work" data-project="network-ops">
+            <img src="./images/work-network-ops.svg" alt="Network operations illustration" />
+            <span class="project-card-body">
+              <span class="project-title">Core Network Services</span>
+              <span class="project-meta">Routers, switches, firewalls, VPNs, DNS, DHCP</span>
+            </span>
+          </button>
+
+          <button class="project-card" type="button" data-group="work" data-project="server-room">
+            <img src="./images/work-server-room.svg" alt="Server room infrastructure illustration" />
+            <span class="project-card-body">
+              <span class="project-title">Server Room Infrastructure</span>
+              <span class="project-meta">Servers, UPS systems, modems, switches, firewalls, cable management</span>
+            </span>
+          </button>
+
+          <button class="project-card" type="button" data-group="work" data-project="cybersecurity">
+            <img src="./images/work-cybersecurity.svg" alt="Cybersecurity operations illustration" />
+            <span class="project-card-body">
+              <span class="project-title">Cybersecurity Operations</span>
+              <span class="project-meta">Microsoft 365 security, firewalls, network controls</span>
+            </span>
+          </button>
+
+          <button class="project-card" type="button" data-group="work" data-project="migrations">
+            <img src="./images/work-migrations.svg" alt="Migrations and backups illustration" />
+            <span class="project-card-body">
+              <span class="project-title">Migrations, Backups, and Support</span>
+              <span class="project-meta">Data migration, backup workflows, infrastructure support</span>
+            </span>
+          </button>
+
+          <button class="project-card" type="button" data-group="school" data-project="infrastructure" hidden>
             <img src="./images/client-infrastructure.png" alt="Infrastructure rebuild thumbnail" />
             <span class="project-card-body">
               <span class="project-title">Infrastructure Rebuild</span>
@@ -120,7 +177,7 @@
             </span>
           </button>
 
-          <button class="project-card" type="button" data-group="work" data-project="servicenow">
+          <button class="project-card" type="button" data-group="school" data-project="servicenow" hidden>
             <img src="./images/servicenow.jpg" alt="ServiceNow thumbnail" />
             <span class="project-card-body">
               <span class="project-title">ServiceNow Service Desk</span>
@@ -128,7 +185,7 @@
             </span>
           </button>
 
-          <button class="project-card" type="button" data-group="work" data-project="network">
+          <button class="project-card" type="button" data-group="school" data-project="network" hidden>
             <img src="./images/ciscopt.jpg" alt="Network design thumbnail" />
             <span class="project-card-body">
               <span class="project-title">Enterprise Network Design</span>
@@ -136,7 +193,7 @@
             </span>
           </button>
 
-          <button class="project-card" type="button" data-group="work" data-project="azure">
+          <button class="project-card" type="button" data-group="school" data-project="azure" hidden>
             <img src="./images/msazure.png" alt="Azure thumbnail" />
             <span class="project-card-body">
               <span class="project-title">Cloud Transformation</span>
@@ -144,7 +201,7 @@
             </span>
           </button>
 
-          <button class="project-card" type="button" data-group="work" data-project="security">
+          <button class="project-card" type="button" data-group="school" data-project="security" hidden>
             <img src="./images/paloalto.png" alt="Security thumbnail" />
             <span class="project-card-body">
               <span class="project-title">Network Security Design</span>
@@ -244,18 +301,102 @@
 
     const projectData = {
       endpoint: {
-        group: "Professional / Work Project",
+        group: "Work Experience",
         title: "Endpoint Management",
         meta: "Device Management and Microsoft Defender",
         image: "./images/Intune.png",
         alt: "Microsoft Intune and Defender configuration",
         caption: "Intune and Defender",
         paragraphs: [
-          "Custom configured Intune policies and Microsoft Defender updates, strengthening endpoint security and compliance across user devices."
+            "Custom configured Intune policies and Microsoft Defender updates, strengthening endpoint security and compliance across user devices."
+          ]
+        },
+      "m365-admin": {
+        group: "Work Experience",
+        title: "Microsoft 365 Administration",
+        meta: "Exchange, SharePoint, Entra ID, Azure, Purview, Security",
+        image: "./images/work-m365-admin.svg",
+        alt: "Microsoft 365 administration illustration",
+        caption: "Microsoft 365 environments",
+        paragraphs: [
+          "Support and administer Microsoft 365 environments across Exchange, SharePoint, Entra ID, Azure, Purview, and Microsoft security tooling.",
+          "Focused on keeping core services stable, secure, and well-managed for day-to-day business use."
+        ]
+      },
+      "windows-server": {
+        group: "Work Experience",
+        title: "Windows Server Infrastructure",
+        meta: "Active Directory, Group Policy, file services, DNS, DHCP",
+        image: "./images/work-windows-server.svg",
+        alt: "Windows Server infrastructure illustration",
+        caption: "Windows Server administration",
+        paragraphs: [
+          "Manage and maintain Windows Server environments including Active Directory, Group Policy, file services, DNS, and DHCP.",
+          "Support identity, access, and core infrastructure services that keep business systems running smoothly."
+        ]
+      },
+      endpoints: {
+        group: "Work Experience",
+        title: "Endpoints and Workstations",
+        meta: "Windows 10 and 11, macOS, hardware support",
+        image: "./images/work-endpoints.svg",
+        alt: "Endpoint support illustration",
+        caption: "Endpoint support",
+        paragraphs: [
+          "Install, configure, and troubleshoot endpoints, workstations, and hardware across Windows 10, Windows 11, and macOS environments.",
+          "Provide hands-on setup and issue resolution for user devices and day-to-day workstation support."
+        ]
+      },
+      "network-ops": {
+        group: "Work Experience",
+        title: "Core Network Services",
+        meta: "Routers, switches, firewalls, VPNs, DNS, DHCP",
+        image: "./images/work-network-ops.svg",
+        alt: "Network operations illustration",
+        caption: "Core networking",
+        paragraphs: [
+          "Configure, maintain, and troubleshoot core network services including routers, switches, firewalls, VPNs, DNS, and DHCP.",
+          "Support reliable connectivity and practical network operations across business environments."
+        ]
+      },
+      "server-room": {
+        group: "Work Experience",
+        title: "Server Room Infrastructure",
+        meta: "Servers, UPS systems, modems, switches, firewalls, cable management",
+        image: "./images/work-server-room.svg",
+        alt: "Server room infrastructure illustration",
+        caption: "On-prem infrastructure",
+        paragraphs: [
+          "Install, maintain, and support on-premises server room infrastructure including servers, UPS systems, modems, switches, firewalls, and cable management.",
+          "Help keep physical infrastructure organized, dependable, and ready for operational use."
+        ]
+      },
+      cybersecurity: {
+        group: "Work Experience",
+        title: "Cybersecurity Operations",
+        meta: "Microsoft 365 security, firewalls, network controls",
+        image: "./images/work-cybersecurity.svg",
+        alt: "Cybersecurity operations illustration",
+        caption: "Security administration",
+        paragraphs: [
+          "Configure, troubleshoot, and maintain cybersecurity infrastructure across Microsoft 365, firewalls, and network security controls.",
+          "Support secure configurations, monitoring, and practical defensive controls across user and network environments."
+        ]
+      },
+      migrations: {
+        group: "Work Experience",
+        title: "Migrations, Backups, and Support",
+        meta: "Data migration, backup workflows, infrastructure support",
+        image: "./images/work-migrations.svg",
+        alt: "Migrations and backups illustration",
+        caption: "Migrations and backups",
+        paragraphs: [
+          "Perform data migrations, backups, and general infrastructure support across business systems and user environments.",
+          "Help protect continuity while moving systems, maintaining backups, and handling day-to-day support needs."
         ]
       },
       infrastructure: {
-        group: "Professional / Work Project",
+        group: "School Project",
         title: "Client Office Infrastructure Rebuild",
         meta: "IT Infrastructure and Networking",
         image: "./images/client-infrastructure.png",
@@ -264,10 +405,10 @@
         paragraphs: [
           "Built a client's IT environment after an office move.",
           "Configured firewall, router, switches, and VOIP systems, deployed two domain controllers, set up TVs with mini PCs, and prepared end-user workstations with docks and cable management."
-        ]
-      },
+          ]
+        },
       servicenow: {
-        group: "Professional / Work Project",
+        group: "School Project",
         title: "ServiceNow Service Desk",
         meta: "ITIL and ServiceNow",
         image: "./images/servicenow.jpg",
@@ -276,10 +417,10 @@
         paragraphs: [
           "Worked in a simulated IT service desk environment using ServiceNow.",
           "Logged, categorized, and resolved incident tickets while following ITIL best practices for escalation and problem management."
-        ]
-      },
+          ]
+        },
       network: {
-        group: "Professional / Work Project",
+        group: "School Project",
         title: "Multi-Site Enterprise Network Design",
         meta: "Network Design and Cisco",
         image: "./images/ciscopt.jpg",
@@ -288,10 +429,10 @@
         paragraphs: [
           "Built a logical multi-site enterprise network in Packet Tracer with VLANs, subnetting and summarization, redundant gateways, and mixed OSPF and EIGRP routing.",
           "The design focused on scalability, security, and practical enterprise architecture."
-        ]
-      },
+          ]
+        },
       azure: {
-        group: "Professional / Work Project",
+        group: "School Project",
         title: "WIT Cloud Transformation",
         meta: "Cloud Architecture and Azure",
         image: "./images/msazure.png",
@@ -300,10 +441,10 @@
         paragraphs: [
           "Collaborated on a hybrid cloud design using Azure.",
           "Built Entra ID and RBAC layouts, resource groups, secure connectivity, disaster recovery planning, monitoring, and supporting diagrams and cost analysis."
-        ]
-      },
+          ]
+        },
       security: {
-        group: "Professional / Work Project",
+        group: "School Project",
         title: "Advanced Network Security Design",
         meta: "Firewall Security and Threat Intelligence",
         image: "./images/paloalto.png",

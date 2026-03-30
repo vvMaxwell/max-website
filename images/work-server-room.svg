@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <rect width="1200" height="900" fill="#eef5df"/>
+  <rect x="220" y="140" width="250" height="600" rx="28" fill="#ffffff"/>
+  <rect x="500" y="140" width="250" height="600" rx="28" fill="#ffffff"/>
+  <rect x="780" y="140" width="200" height="440" rx="28" fill="#dbe8c2"/>
+  <g fill="#7ea95c">
+    <rect x="260" y="210" width="170" height="34" rx="12"/>
+    <rect x="260" y="300" width="170" height="34" rx="12"/>
+    <rect x="260" y="390" width="170" height="34" rx="12"/>
+    <rect x="260" y="480" width="170" height="34" rx="12"/>
+    <rect x="260" y="570" width="170" height="34" rx="12"/>
+    <rect x="540" y="210" width="170" height="34" rx="12"/>
+    <rect x="540" y="300" width="170" height="34" rx="12"/>
+    <rect x="540" y="390" width="170" height="34" rx="12"/>
+    <rect x="540" y="480" width="170" height="34" rx="12"/>
+    <rect x="540" y="570" width="170" height="34" rx="12"/>
+  </g>
+  <path d="M180 760c210-130 540-130 840 0" fill="none" stroke="#f0d78f" stroke-width="24" stroke-linecap="round"/>
+  <path d="M220 790c200-120 500-120 760 0" fill="none" stroke="#d4b370" stroke-width="14" stroke-linecap="round"/>
+</svg>

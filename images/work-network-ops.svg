@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <rect width="1200" height="900" fill="#eef6e1"/>
+  <circle cx="600" cy="450" r="130" fill="#86b160"/>
+  <circle cx="320" cy="260" r="82" fill="#d9e7bf"/>
+  <circle cx="880" cy="260" r="82" fill="#d9e7bf"/>
+  <circle cx="270" cy="640" r="82" fill="#d9e7bf"/>
+  <circle cx="930" cy="640" r="82" fill="#d9e7bf"/>
+  <path d="M600 450L320 260M600 450L880 260M600 450L270 640M600 450L930 640" stroke="#5a8440" stroke-width="24" stroke-linecap="round"/>
+  <circle cx="600" cy="450" r="52" fill="#f0d78f"/>
+  <rect x="520" y="150" width="160" height="64" rx="18" fill="#ffffff"/>
+  <text x="600" y="192" text-anchor="middle" font-size="34" font-family="Segoe UI, Arial, sans-serif" fill="#4b6436">VPN</text>
+</svg>
