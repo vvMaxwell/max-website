@@ -6,9 +6,9 @@
   <title>Max Wroblewsky</title>
   <meta
     name="description"
-    content="Max Wroblewsky - IT professional portfolio with projects, resume, LinkedIn, email, and Calgary contact details."
+    content="A scenic personal website for Max Wroblewsky with projects, contact links, and a garden-inspired visual design."
   />
-  <link rel="stylesheet" href="style.css?v=11" />
+  <link rel="stylesheet" href="style.css?v=12" />
 </head>
 <body>
   <div class="scene" aria-hidden="true">
@@ -17,14 +17,21 @@
     <div class="cloud cloud-1"></div>
     <div class="cloud cloud-2"></div>
     <div class="cloud cloud-3"></div>
+    <div class="distant-haze"></div>
     <div class="hill hill-back"></div>
     <div class="hill hill-mid"></div>
     <div class="hill hill-front"></div>
+    <div class="stone-wall"></div>
     <div class="tree-canopy"></div>
+    <div class="tree-trunks"></div>
     <div class="stone-path"></div>
     <div class="wildflowers wildflowers-left"></div>
     <div class="wildflowers wildflowers-right"></div>
+    <div class="grass-sweep grass-sweep-1"></div>
+    <div class="grass-sweep grass-sweep-2"></div>
     <div class="floating-seeds">
+      <span></span>
+      <span></span>
       <span></span>
       <span></span>
       <span></span>
@@ -35,250 +42,222 @@
   </div>
 
   <header class="site-header">
-    <a class="brand" href="#home">Max Wroblewsky</a>
-    <nav class="top-nav" aria-label="Primary">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#connect">Connect</a>
+    <a class="brand-chip" href="#home">Max Wroblewsky</a>
+    <nav class="scene-nav" aria-label="Primary">
+      <button class="chip-button" type="button" data-open="about-dialog">About</button>
+      <button class="chip-button" type="button" data-open="projects-dialog">Projects</button>
+      <button class="chip-button" type="button" data-open="connect-dialog">Connect</button>
     </nav>
   </header>
 
-  <main class="page-shell">
-    <section class="hero" id="home">
-      <div class="hero-card story-card">
-        <div class="hero-card-top">
-          <img
-            class="avatar"
-            src="./assets/headshots/headshot-main.jpg"
-            alt="Photo of Max Wroblewsky"
-          />
-          <div>
-            <p class="eyebrow">Calgary, Alberta</p>
-            <h1>Max Wroblewsky</h1>
-            <p class="hero-role">IT Professional and Tech Support Specialist</p>
-          </div>
-        </div>
-        <p class="hero-copy">
-          I build and support dependable systems, networks, and user experiences.
-          This site is designed like a garden path: a calm place to explore my work,
-          connect with me, and walk through the projects I am most proud of.
-        </p>
-        <div class="hero-actions">
-          <a class="garden-button primary" href="./assets/docs/Max-Wroblewsky-Resume.pdf" target="_blank" rel="noopener">Open Resume</a>
-          <a class="garden-button" href="#projects">View Projects</a>
-          <a class="garden-button" href="mailto:max@wroblewsky.com">Send Email</a>
-        </div>
-      </div>
-
-      <aside class="hero-photo story-card">
-        <img
-          src="./assets/headshots/headshot-side.jpg"
-          alt="Max Wroblewsky presenting in a classroom"
-        />
-        <div class="photo-caption">
-          <p class="eyebrow">A little more about me</p>
-          <p>I enjoy building polished, practical solutions and presenting ideas clearly.</p>
-        </div>
-      </aside>
-    </section>
-
-    <section class="info-grid" id="about">
-      <article class="story-card info-card">
-        <p class="eyebrow">What I Do</p>
-        <h2>Technical support with a systems mindset</h2>
-        <p>
-          My background spans endpoint management, networking, cloud projects,
-          service desk workflows, and hands-on infrastructure support. I like
-          clean documentation, stable systems, and making technology easier for people.
-        </p>
-      </article>
-
-      <article class="story-card info-card">
-        <p class="eyebrow">Where I Work Best</p>
-        <h2>Operations, support, and project delivery</h2>
-        <p>
-          I am comfortable moving between user-facing support and deeper technical work:
-          from resolving incidents and configuring tools to building out environments and labs.
-        </p>
-      </article>
-
-      <article class="story-card info-card">
-        <p class="eyebrow">Home Base</p>
-        <h2>Calgary, AB</h2>
-        <p>
-          Based in Calgary and always learning through personal lab projects, cloud experiments,
-          and practical infrastructure builds that sharpen my day-to-day skills.
-        </p>
-      </article>
-    </section>
-
-    <section class="projects-section story-card" id="projects">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">Projects Garden</p>
-          <h2>Walk through my work</h2>
-        </div>
-        <p class="section-copy">
-          Select a path below to explore professional work or personal homelab projects.
-          Click any project card to open the full story.
-        </p>
-      </div>
-
-      <div class="project-tabs" role="tablist" aria-label="Project categories">
-        <button class="tab-button is-active" type="button" data-tab="work" role="tab" aria-selected="true">Professional / Work</button>
-        <button class="tab-button" type="button" data-tab="personal" role="tab" aria-selected="false">Personal / Homelab</button>
-      </div>
-
-      <div class="project-grid">
-        <button class="project-card" type="button" data-group="work" data-project="endpoint">
-          <img src="./images/Intune.png" alt="Endpoint management project thumbnail" />
-          <span class="project-card-body">
-            <span class="project-title">Endpoint Management</span>
-            <span class="project-meta">Device Management and Microsoft Defender</span>
-          </span>
-        </button>
-
-        <button class="project-card" type="button" data-group="work" data-project="infrastructure">
-          <img src="./images/client-infrastructure.png" alt="Infrastructure rebuild project thumbnail" />
-          <span class="project-card-body">
-            <span class="project-title">Client Office Infrastructure Rebuild</span>
-            <span class="project-meta">IT Infrastructure and Networking</span>
-          </span>
-        </button>
-
-        <button class="project-card" type="button" data-group="work" data-project="servicenow">
-          <img src="./images/servicenow.jpg" alt="ServiceNow project thumbnail" />
-          <span class="project-card-body">
-            <span class="project-title">ServiceNow Service Desk</span>
-            <span class="project-meta">ITIL and ServiceNow</span>
-          </span>
-        </button>
-
-        <button class="project-card" type="button" data-group="work" data-project="network">
-          <img src="./images/ciscopt.jpg" alt="Network design project thumbnail" />
-          <span class="project-card-body">
-            <span class="project-title">Multi-Site Enterprise Network Design</span>
-            <span class="project-meta">Network Design and Cisco</span>
-          </span>
-        </button>
-
-        <button class="project-card" type="button" data-group="work" data-project="azure">
-          <img src="./images/msazure.png" alt="Azure project thumbnail" />
-          <span class="project-card-body">
-            <span class="project-title">WIT Cloud Transformation</span>
-            <span class="project-meta">Cloud Architecture and Azure</span>
-          </span>
-        </button>
-
-        <button class="project-card" type="button" data-group="work" data-project="capstone">
-          <img src="./images/mspowerapp.png" alt="Capstone project thumbnail" />
-          <span class="project-card-body">
-            <span class="project-title">Capstone Project</span>
-            <span class="project-meta">Volunteer App and PowerApps</span>
-          </span>
-        </button>
-
-        <button class="project-card" type="button" data-group="work" data-project="security">
-          <img src="./images/paloalto.png" alt="Security project thumbnail" />
-          <span class="project-card-body">
-            <span class="project-title">Advanced Network Security Design</span>
-            <span class="project-meta">Firewall Security and Threat Intelligence</span>
-          </span>
-        </button>
-
-        <button class="project-card" type="button" data-group="personal" data-project="proxmox" hidden>
-          <img src="./images/proxmox-tree.png" alt="Proxmox project thumbnail" />
-          <span class="project-card-body">
-            <span class="project-title">Proxmox Cluster</span>
-            <span class="project-meta">RAID 10 and multiple VMs and containers</span>
-          </span>
-        </button>
-
-        <button class="project-card" type="button" data-group="personal" data-project="plex" hidden>
-          <img src="./images/plex-dashboard.jpg" alt="Plex project thumbnail" />
-          <span class="project-card-body">
-            <span class="project-title">Plex Media Server</span>
-            <span class="project-meta">Media Server and Remote Streaming</span>
-          </span>
-        </button>
-
-        <button class="project-card" type="button" data-group="personal" data-project="mailcow" hidden>
-          <img src="./images/mailcow.jpg" alt="Mailcow project thumbnail" />
-          <span class="project-card-body">
-            <span class="project-title">Mail Server (Mailcow)</span>
-            <span class="project-meta">DKIM, DMARC, SPF and Backups</span>
-          </span>
-        </button>
-
-        <button class="project-card" type="button" data-group="personal" data-project="ai" hidden>
-          <img src="./images/ai.png" alt="AI project thumbnail" />
-          <span class="project-card-body">
-            <span class="project-title">AI / LLM</span>
-            <span class="project-meta">Text generation and image generation</span>
-          </span>
-        </button>
-
-        <button class="project-card" type="button" data-group="personal" data-project="cisco-lab" hidden>
-          <img src="./images/cisco-lab.png" alt="Cisco lab project thumbnail" />
-          <span class="project-card-body">
-            <span class="project-title">Cisco Lab</span>
-            <span class="project-meta">VLANs, trunking and ACLs</span>
-          </span>
-        </button>
+  <main class="page" id="home">
+    <section class="scene-copy" aria-label="Welcome">
+      <p class="eyebrow">Scenic Portfolio</p>
+      <h1>A quiet hillside garden with my work tucked inside.</h1>
+      <p class="scene-description">
+        This site is meant to feel more like a place than a resume. The landscape comes first.
+        If you want to explore my projects or reach out, the signposts are here when you want them.
+      </p>
+      <div class="scene-actions">
+        <button class="garden-pill" type="button" data-open="projects-dialog">Explore Projects</button>
+        <button class="garden-pill subtle" type="button" data-open="about-dialog">Who I Am</button>
       </div>
     </section>
 
-    <section class="connect-section" id="connect">
-      <article class="story-card connect-card">
-        <p class="eyebrow">Connect</p>
-        <h2>Take the next step</h2>
-        <p>
-          If you want to talk about support work, projects, or opportunities,
-          the easiest route is below.
-        </p>
-        <div class="connect-links">
-          <a class="garden-button primary" href="mailto:max@wroblewsky.com">Email Me</a>
-          <a class="garden-button" href="https://www.linkedin.com/in/max-wroblewsky-a6492a345/" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="garden-button" href="./assets/docs/Max-Wroblewsky-Resume.pdf" target="_blank" rel="noopener">Resume PDF</a>
-        </div>
-      </article>
+    <button class="path-marker marker-left" type="button" data-open="about-dialog">
+      <span class="marker-label">About Me</span>
+      <span class="marker-note">A short introduction</span>
+    </button>
 
-      <article class="story-card address-card">
-        <p class="eyebrow">Location</p>
-        <h2>Calgary, AB</h2>
-        <p>
-          Available for conversations around IT support, infrastructure work,
-          networking, cloud projects, and hands-on technical roles.
-        </p>
-      </article>
-    </section>
+    <button class="path-marker marker-center" type="button" data-open="projects-dialog">
+      <span class="marker-label">Projects</span>
+      <span class="marker-note">Work and homelab builds</span>
+    </button>
+
+    <button class="path-marker marker-right" type="button" data-open="connect-dialog">
+      <span class="marker-label">Connect</span>
+      <span class="marker-note">Resume, LinkedIn, email</span>
+    </button>
   </main>
 
-  <footer class="site-footer">
-    <p>Max Wroblewsky</p>
-    <div class="footer-links">
-      <a href="./privacy.html">Privacy</a>
-      <a href="./terms.html">Terms</a>
-    </div>
-  </footer>
-
-  <dialog class="project-dialog" id="project-dialog" aria-labelledby="project-dialog-title">
-    <article class="dialog-card">
-      <button class="dialog-close" type="button" aria-label="Close project details">X</button>
-      <div class="dialog-copy">
-        <p class="eyebrow" id="project-dialog-group">Project</p>
-        <h3 id="project-dialog-title"></h3>
-        <p class="dialog-meta" id="project-dialog-meta"></p>
-        <div id="project-dialog-text"></div>
+  <dialog class="garden-dialog" id="about-dialog" aria-labelledby="about-title">
+    <article class="dialog-shell">
+      <button class="dialog-close" type="button" aria-label="Close">X</button>
+      <div class="dialog-content">
+        <p class="eyebrow">About</p>
+        <h2 id="about-title">A little about me</h2>
+        <div class="dialog-copy">
+          <img class="dialog-avatar" src="./assets/headshots/headshot-main.jpg" alt="Photo of Max Wroblewsky" />
+          <div>
+            <p>
+              I’m Max Wroblewsky, an IT professional based in Calgary, Alberta. My background includes
+              technical support, networking, infrastructure, endpoint management, and cloud-related work.
+            </p>
+            <p>
+              I also spend a lot of time learning through homelab projects and hands-on builds. This site
+              is intentionally more atmosphere than portfolio, but the work is here if you want to wander into it.
+            </p>
+          </div>
+        </div>
       </div>
-      <figure class="dialog-figure">
-        <img id="project-dialog-image" src="" alt="" />
-        <figcaption id="project-dialog-caption"></figcaption>
-      </figure>
+    </article>
+  </dialog>
+
+  <dialog class="garden-dialog" id="projects-dialog" aria-labelledby="projects-title">
+    <article class="dialog-shell">
+      <button class="dialog-close" type="button" aria-label="Close">X</button>
+      <div class="dialog-content">
+        <div class="dialog-header">
+          <div>
+            <p class="eyebrow">Projects</p>
+            <h2 id="projects-title">Small paths into the work</h2>
+          </div>
+          <div class="project-tabs" role="tablist" aria-label="Project categories">
+            <button class="tab-button is-active" type="button" data-tab="work" role="tab" aria-selected="true">Work</button>
+            <button class="tab-button" type="button" data-tab="personal" role="tab" aria-selected="false">Personal</button>
+          </div>
+        </div>
+
+        <div class="project-grid">
+          <button class="project-card" type="button" data-group="work" data-project="endpoint">
+            <img src="./images/Intune.png" alt="Endpoint management project thumbnail" />
+            <span class="project-card-body">
+              <span class="project-title">Endpoint Management</span>
+              <span class="project-meta">Device Management and Microsoft Defender</span>
+            </span>
+          </button>
+
+          <button class="project-card" type="button" data-group="work" data-project="infrastructure">
+            <img src="./images/client-infrastructure.png" alt="Infrastructure rebuild thumbnail" />
+            <span class="project-card-body">
+              <span class="project-title">Infrastructure Rebuild</span>
+              <span class="project-meta">Office environment and networking</span>
+            </span>
+          </button>
+
+          <button class="project-card" type="button" data-group="work" data-project="servicenow">
+            <img src="./images/servicenow.jpg" alt="ServiceNow thumbnail" />
+            <span class="project-card-body">
+              <span class="project-title">ServiceNow Service Desk</span>
+              <span class="project-meta">ITIL and ticket workflows</span>
+            </span>
+          </button>
+
+          <button class="project-card" type="button" data-group="work" data-project="network">
+            <img src="./images/ciscopt.jpg" alt="Network design thumbnail" />
+            <span class="project-card-body">
+              <span class="project-title">Enterprise Network Design</span>
+              <span class="project-meta">Cisco and multi-site routing</span>
+            </span>
+          </button>
+
+          <button class="project-card" type="button" data-group="work" data-project="azure">
+            <img src="./images/msazure.png" alt="Azure thumbnail" />
+            <span class="project-card-body">
+              <span class="project-title">Cloud Transformation</span>
+              <span class="project-meta">Azure and hybrid architecture</span>
+            </span>
+          </button>
+
+          <button class="project-card" type="button" data-group="work" data-project="security">
+            <img src="./images/paloalto.png" alt="Security thumbnail" />
+            <span class="project-card-body">
+              <span class="project-title">Network Security Design</span>
+              <span class="project-meta">Palo Alto and threat intelligence</span>
+            </span>
+          </button>
+
+          <button class="project-card" type="button" data-group="personal" data-project="proxmox" hidden>
+            <img src="./images/proxmox-tree.png" alt="Proxmox thumbnail" />
+            <span class="project-card-body">
+              <span class="project-title">Proxmox Cluster</span>
+              <span class="project-meta">RAID 10 and VM infrastructure</span>
+            </span>
+          </button>
+
+          <button class="project-card" type="button" data-group="personal" data-project="plex" hidden>
+            <img src="./images/plex-dashboard.jpg" alt="Plex thumbnail" />
+            <span class="project-card-body">
+              <span class="project-title">Plex Media Server</span>
+              <span class="project-meta">Remote streaming and automation</span>
+            </span>
+          </button>
+
+          <button class="project-card" type="button" data-group="personal" data-project="mailcow" hidden>
+            <img src="./images/mailcow.jpg" alt="Mailcow thumbnail" />
+            <span class="project-card-body">
+              <span class="project-title">Mail Server</span>
+              <span class="project-meta">Mailcow, backups, and hardening</span>
+            </span>
+          </button>
+
+          <button class="project-card" type="button" data-group="personal" data-project="ai" hidden>
+            <img src="./images/ai.png" alt="AI thumbnail" />
+            <span class="project-card-body">
+              <span class="project-title">AI / LLM</span>
+              <span class="project-meta">Local text and image generation</span>
+            </span>
+          </button>
+
+          <button class="project-card" type="button" data-group="personal" data-project="cisco-lab" hidden>
+            <img src="./images/cisco-lab.png" alt="Cisco lab thumbnail" />
+            <span class="project-card-body">
+              <span class="project-title">Cisco Lab</span>
+              <span class="project-meta">VLANs, trunking, and ACLs</span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </article>
+  </dialog>
+
+  <dialog class="garden-dialog" id="connect-dialog" aria-labelledby="connect-title">
+    <article class="dialog-shell">
+      <button class="dialog-close" type="button" aria-label="Close">X</button>
+      <div class="dialog-content">
+        <p class="eyebrow">Connect</p>
+        <h2 id="connect-title">If you want the links, they’re here.</h2>
+        <div class="link-stack">
+          <a class="garden-link" href="mailto:max@wroblewsky.com">Email</a>
+          <a class="garden-link" href="https://www.linkedin.com/in/max-wroblewsky-a6492a345/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="garden-link" href="./assets/docs/Max-Wroblewsky-Resume.pdf" target="_blank" rel="noopener">Resume PDF</a>
+          <span class="garden-location">Calgary, AB</span>
+        </div>
+      </div>
+    </article>
+  </dialog>
+
+  <dialog class="garden-dialog project-detail-dialog" id="project-detail-dialog" aria-labelledby="project-detail-title">
+    <article class="dialog-shell detail-shell">
+      <button class="dialog-close" type="button" aria-label="Close">X</button>
+      <div class="dialog-content detail-content">
+        <div>
+          <p class="eyebrow" id="project-detail-group">Project</p>
+          <h2 id="project-detail-title"></h2>
+          <p class="detail-meta" id="project-detail-meta"></p>
+          <div id="project-detail-text"></div>
+        </div>
+        <figure class="detail-figure">
+          <img id="project-detail-image" src="" alt="" />
+          <figcaption id="project-detail-caption"></figcaption>
+        </figure>
+      </div>
     </article>
   </dialog>
 
   <script>
+    const modalButtons = document.querySelectorAll("[data-open]");
+    const dialogs = document.querySelectorAll(".garden-dialog");
+    const tabButtons = document.querySelectorAll(".tab-button");
+    const projectCards = document.querySelectorAll(".project-card");
+    const detailDialog = document.getElementById("project-detail-dialog");
+    const detailGroup = document.getElementById("project-detail-group");
+    const detailTitle = document.getElementById("project-detail-title");
+    const detailMeta = document.getElementById("project-detail-meta");
+    const detailText = document.getElementById("project-detail-text");
+    const detailImage = document.getElementById("project-detail-image");
+    const detailCaption = document.getElementById("project-detail-caption");
+
     const projectData = {
       endpoint: {
         group: "Professional / Work Project",
@@ -339,18 +318,6 @@
           "Built Entra ID and RBAC layouts, resource groups, secure connectivity, disaster recovery planning, monitoring, and supporting diagrams and cost analysis."
         ]
       },
-      capstone: {
-        group: "Professional / Work Project",
-        title: "Capstone Project",
-        meta: "Volunteer App and PowerApps",
-        image: "./images/mspowerapp.png",
-        alt: "Power Apps volunteer matching interface",
-        caption: "Power Apps prototype",
-        paragraphs: [
-          "Built a volunteer matching platform in Microsoft Azure and Power Apps.",
-          "The project included job postings, profiles, reviews, and a swipe-style matching workflow to connect volunteers with organizations."
-        ]
-      },
       security: {
         group: "Professional / Work Project",
         title: "Advanced Network Security Design",
@@ -366,7 +333,7 @@
       proxmox: {
         group: "Personal / Homelab Project",
         title: "Proxmox Cluster",
-        meta: "RAID 10 and multiple VMs and containers",
+        meta: "RAID 10 and VM infrastructure",
         image: "./images/proxmox-tree.png",
         alt: "Proxmox inventory",
         caption: "Proxmox inventory",
@@ -389,8 +356,8 @@
       },
       mailcow: {
         group: "Personal / Homelab Project",
-        title: "Mail Server (Mailcow)",
-        meta: "DKIM, DMARC, SPF and Backups",
+        title: "Mail Server",
+        meta: "Mailcow, backups, and hardening",
         image: "./images/mailcow.jpg",
         alt: "Mailcow interface",
         caption: "Mail server",
@@ -413,7 +380,7 @@
       "cisco-lab": {
         group: "Personal / Homelab Project",
         title: "Cisco Lab",
-        meta: "VLANs, trunking and ACLs",
+        meta: "VLANs, trunking, and ACLs",
         image: "./images/cisco-lab.png",
         alt: "Cisco router and switch",
         caption: "Cisco homelab",
@@ -424,16 +391,38 @@
       }
     };
 
-    const tabButtons = document.querySelectorAll(".tab-button");
-    const projectCards = document.querySelectorAll(".project-card");
-    const dialog = document.getElementById("project-dialog");
-    const dialogClose = dialog.querySelector(".dialog-close");
-    const dialogGroup = document.getElementById("project-dialog-group");
-    const dialogTitle = document.getElementById("project-dialog-title");
-    const dialogMeta = document.getElementById("project-dialog-meta");
-    const dialogText = document.getElementById("project-dialog-text");
-    const dialogImage = document.getElementById("project-dialog-image");
-    const dialogCaption = document.getElementById("project-dialog-caption");
+    const openDialog = (id) => {
+      const dialog = document.getElementById(id);
+      if (dialog) {
+        dialog.showModal();
+      }
+    };
+
+    const closeDialog = (dialog) => dialog.close();
+
+    modalButtons.forEach((button) => {
+      button.addEventListener("click", () => openDialog(button.dataset.open));
+    });
+
+    dialogs.forEach((dialog) => {
+      const closeButton = dialog.querySelector(".dialog-close");
+
+      closeButton?.addEventListener("click", () => closeDialog(dialog));
+
+      dialog.addEventListener("click", (event) => {
+        const shell = dialog.querySelector(".dialog-shell");
+        const rect = shell.getBoundingClientRect();
+        const clickedInside =
+          event.clientX >= rect.left &&
+          event.clientX <= rect.right &&
+          event.clientY >= rect.top &&
+          event.clientY <= rect.bottom;
+
+        if (!clickedInside) {
+          closeDialog(dialog);
+        }
+      });
+    });
 
     const setTab = (group) => {
       tabButtons.forEach((button) => {
@@ -458,31 +447,15 @@
           return;
         }
 
-        dialogGroup.textContent = project.group;
-        dialogTitle.textContent = project.title;
-        dialogMeta.textContent = project.meta;
-        dialogText.innerHTML = project.paragraphs.map((paragraph) => `<p>${paragraph}</p>`).join("");
-        dialogImage.src = project.image;
-        dialogImage.alt = project.alt;
-        dialogCaption.textContent = project.caption;
-        dialog.showModal();
+        detailGroup.textContent = project.group;
+        detailTitle.textContent = project.title;
+        detailMeta.textContent = project.meta;
+        detailText.innerHTML = project.paragraphs.map((paragraph) => `<p>${paragraph}</p>`).join("");
+        detailImage.src = project.image;
+        detailImage.alt = project.alt;
+        detailCaption.textContent = project.caption;
+        detailDialog.showModal();
       });
-    });
-
-    const closeDialog = () => dialog.close();
-
-    dialogClose.addEventListener("click", closeDialog);
-    dialog.addEventListener("click", (event) => {
-      const rect = dialog.querySelector(".dialog-card").getBoundingClientRect();
-      const clickedInside =
-        event.clientX >= rect.left &&
-        event.clientX <= rect.right &&
-        event.clientY >= rect.top &&
-        event.clientY <= rect.bottom;
-
-      if (!clickedInside) {
-        closeDialog();
-      }
     });
 
     setTab("work");
