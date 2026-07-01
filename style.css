@@ -364,6 +364,12 @@ body{
 .detail-content p{
   margin-top:0;
 }
+.detail-content a{
+  color:var(--accent-deep);
+  font-weight:800;
+  text-decoration-thickness:2px;
+  text-underline-offset:3px;
+}
 .detail-figure{
   margin:0;
   overflow:hidden;
