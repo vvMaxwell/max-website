@@ -1,17 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
   <rect width="1200" height="900" fill="#eef6e1"/>
-  <rect x="170" y="150" width="280" height="560" rx="28" fill="#ffffff"/>
-  <rect x="500" y="150" width="280" height="560" rx="28" fill="#ffffff"/>
-  <rect x="830" y="150" width="200" height="320" rx="28" fill="#dbe8c2"/>
+  <rect x="142" y="132" width="916" height="636" rx="44" fill="#ffffff"/>
+  <rect x="208" y="214" width="270" height="330" rx="28" fill="#d9e7bf"/>
+  <rect x="530" y="214" width="270" height="330" rx="28" fill="#d9e7bf"/>
+  <rect x="852" y="214" width="136" height="330" rx="28" fill="#c7d9a7"/>
   <g fill="#6f9d49">
-    <rect x="220" y="220" width="180" height="30" rx="10"/>
-    <rect x="220" y="290" width="180" height="30" rx="10"/>
-    <rect x="220" y="360" width="180" height="30" rx="10"/>
-    <rect x="220" y="430" width="180" height="30" rx="10"/>
-    <rect x="550" y="220" width="180" height="30" rx="10"/>
-    <rect x="550" y="290" width="180" height="30" rx="10"/>
-    <rect x="550" y="360" width="180" height="30" rx="10"/>
-    <rect x="550" y="430" width="180" height="30" rx="10"/>
+    <rect x="258" y="278" width="170" height="34" rx="12"/>
+    <rect x="258" y="356" width="170" height="34" rx="12"/>
+    <rect x="258" y="434" width="170" height="34" rx="12"/>
+    <rect x="580" y="278" width="170" height="34" rx="12"/>
+    <rect x="580" y="356" width="170" height="34" rx="12"/>
+    <rect x="580" y="434" width="170" height="34" rx="12"/>
   </g>
-  <path d="M250 730h700" stroke="#f0d78f" stroke-width="24" stroke-linecap="round"/>
+  <path d="M342 544v86M666 544v86M920 544v86M342 630h578" stroke="#556f3d" stroke-width="20" stroke-linecap="round"/>
+  <rect x="310" y="662" width="580" height="54" rx="22" fill="#f0d78f"/>
+  <text x="600" y="699" text-anchor="middle" fill="#4d7336" font-family="Trebuchet MS, Segoe UI, sans-serif" font-size="40" font-weight="800">RAID 10 + VMs</text>
 </svg>

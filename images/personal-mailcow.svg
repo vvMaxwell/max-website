@@ -1,10 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
   <rect width="1200" height="900" fill="#eef5df"/>
-  <rect x="160" y="160" width="880" height="580" rx="36" fill="#ffffff"/>
-  <rect x="220" y="240" width="320" height="200" rx="26" fill="#d9e7bf"/>
-  <rect x="600" y="240" width="260" height="56" rx="18" fill="#88b364"/>
-  <rect x="600" y="330" width="320" height="56" rx="18" fill="#d2e1b7"/>
-  <rect x="600" y="420" width="280" height="56" rx="18" fill="#d2e1b7"/>
-  <path d="M270 640h660" stroke="#f0d78f" stroke-width="22" stroke-linecap="round"/>
-  <path d="M286 280l94 74 108-90" fill="none" stroke="#556f3d" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="146" y="142" width="908" height="616" rx="44" fill="#ffffff"/>
+  <rect x="222" y="250" width="392" height="274" rx="30" fill="#d9e7bf"/>
+  <path d="M266 302l152 116 152-116" fill="none" stroke="#556f3d" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M266 496l112-96M570 496l-112-96" fill="none" stroke="#88b364" stroke-width="18" stroke-linecap="round"/>
+  <rect x="684" y="234" width="286" height="72" rx="22" fill="#88b364"/>
+  <rect x="684" y="352" width="286" height="72" rx="22" fill="#d9e7bf"/>
+  <rect x="684" y="470" width="286" height="72" rx="22" fill="#d9e7bf"/>
+  <path d="M826 590v66" stroke="#556f3d" stroke-width="24" stroke-linecap="round"/>
+  <path d="M756 658h140c18 0 34 16 34 34v22H722v-22c0-18 16-34 34-34z" fill="#f0d78f"/>
+  <path d="M774 658v-46c0-42 28-74 52-74s52 32 52 74v46" fill="none" stroke="#556f3d" stroke-width="20" stroke-linecap="round"/>
 </svg>

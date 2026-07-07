@@ -1,11 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
   <rect width="1200" height="900" fill="#eff6e2"/>
-  <rect x="180" y="250" width="360" height="200" rx="30" fill="#ffffff"/>
-  <rect x="660" y="220" width="280" height="300" rx="30" fill="#d9e7bf"/>
-  <rect x="240" y="320" width="240" height="40" rx="14" fill="#88b364"/>
-  <rect x="240" y="390" width="240" height="40" rx="14" fill="#c7d9a7"/>
-  <rect x="720" y="300" width="160" height="34" rx="12" fill="#6f9d49"/>
-  <rect x="720" y="370" width="160" height="34" rx="12" fill="#6f9d49"/>
-  <path d="M540 350h120M600 450v130" stroke="#5a8440" stroke-width="22" stroke-linecap="round"/>
-  <circle cx="600" cy="580" r="84" fill="#f0d78f"/>
+  <rect x="156" y="152" width="888" height="596" rx="44" fill="#ffffff"/>
+  <rect x="240" y="256" width="260" height="156" rx="28" fill="#d9e7bf"/>
+  <rect x="700" y="256" width="260" height="156" rx="28" fill="#d9e7bf"/>
+  <rect x="394" y="550" width="412" height="118" rx="28" fill="#f0d78f"/>
+  <g fill="#6f9d49">
+    <rect x="286" y="312" width="168" height="30" rx="10"/>
+    <rect x="746" y="312" width="168" height="30" rx="10"/>
+    <circle cx="452" cy="370" r="16"/>
+    <circle cx="912" cy="370" r="16"/>
+    <circle cx="466" cy="610" r="15"/>
+    <circle cx="526" cy="610" r="15"/>
+    <circle cx="586" cy="610" r="15"/>
+    <circle cx="646" cy="610" r="15"/>
+    <circle cx="706" cy="610" r="15"/>
+  </g>
+  <path d="M500 334h200M600 412v138M370 412l130 138M830 412L700 550" fill="none" stroke="#556f3d" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="600" y="232" text-anchor="middle" fill="#4d7336" font-family="Trebuchet MS, Segoe UI, sans-serif" font-size="44" font-weight="800">VLAN Lab</text>
 </svg>
